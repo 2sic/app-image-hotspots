@@ -1,16 +1,31 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
+@using ToSic.Razor.Blade;
+@using DotNetNuke.Framework.JavaScriptLibraries;
+@{
+    JavaScript.RequestRegistration(CommonJs.jQuery);
+}
 
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="false">
 
 <div class="hotspots" @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
-        <div class="hotspot" style="top: @hotspot.Y%; left: @hotspot.X%;">
+        <div class="hotspot" style="top: @hotspot.Y%; left: @hotspot.X%;" data-fancybox="hotspots-@Content.EntityId" data-src="#hotspot-content-@hotspot.EntityId">
             <div class="hotspot-border"></div>
             <img src="@App.Path/images/star.svg" alt="@hotspot.Title">
         </div>
     }
-    @* <div class="hotspot" style="top: 11%; left: 18%;"></div> *@
     <img src="@Content.Image" class="hotspot-image">
 </div>
 
+@foreach (var hotspot in Content.Hotspots) {
+    <div id="hotspot-content-@hotspot.EntityId" style="display: none">
+        @if(Text.Has(hotspot.Image)) {
+            <img src="@hotspot.Image?w=900&h=300&quality=80&mode=crop" alt="@hotspot.Title">
+        }
+        @Html.Raw(hotspot.Description)
+    </div>
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" data-enableoptimizations="false" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js" data-enableoptimizations="false"></script>
 <script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
