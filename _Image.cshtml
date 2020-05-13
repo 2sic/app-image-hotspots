@@ -1,6 +1,11 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
 
-<div @Edit.TagToolbar(Content)>
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
+
+<div class="image-wrapper" @Edit.TagToolbar(Content)>
+    <div class="hotspots">
+        <div class="hotspot"></div>
+    </div>
     <img src="@Content.Image">
 </div>
 

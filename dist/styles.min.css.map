@@ -1,0 +1,1 @@
+{"version":3,"sources":["Z:\\Portals\\Image-Hotspots\\2sxc\\Image Hotspots/src\\scss\\_Styles.scss"],"names":[],"mappings":"AAAA,WACE,UACE,iBAAkB,CACnB","file":"styles.min.css","sourcesContent":["@media all {\r\n  .hotspots {\r\n    position: relative;\r\n  }\r\n}"]}
