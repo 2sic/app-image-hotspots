@@ -6,6 +6,10 @@ const hotspotImages = document.querySelectorAll('.hotspots');
 
 hotspotImages.forEach(el => el.addEventListener('click', event => {
   const target = (event.target as HTMLElement);
+  if(!target.classList.contains('hotspot-image')) {
+    return false;
+  }
+
   const e = (event as MouseEvent);
   const moduleId = target.parentElement.dataset.moduleId;
   const entityId = target.parentElement.dataset.entityId
