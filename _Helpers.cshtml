@@ -2,10 +2,10 @@
 @using ToSic.Razor.Blade;
 
 @helper HotspotsAttr(dynamic moduleId, dynamic data) {
-<text>data-module-id="@moduleId" data-entity-id="@data.EntityId" data-guid="@data.EntityGuid"</text>
+<text>data-module-id="@moduleId" data-entity-id="@data.EntityId" data-guid="@data.EntityGuid" data-iconoffset-x="@App.Settings.HotspotOffsetX" data-iconoffset-y="@App.Settings.HotspotOffsetY"</text>
 }
 
 @helper HotspotDataAndStyle(dynamic hotspot, dynamic content) {
-<text>style="top: @hotspot.Y%; left: @hotspot.X%;" data-fancybox="hotspots-@content.EntityId" data-src="#hotspot-content-@hotspot.EntityId" data-options='{"loop": true, "touch": false}'</text>
+<text>style="top: @hotspot.Y%; left: @hotspot.X%; width: @App.Settings.HotspotWidth; height: @App.Settings.HotspotHeight" data-fancybox="hotspots-@content.EntityId" data-src="#hotspot-content-@hotspot.EntityId" data-options='{"loop": true, "touch": false, "fitToView": false}'</text>
 }
 

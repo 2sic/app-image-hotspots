@@ -12,8 +12,8 @@
 <div class="hotspots" @helpers.HotspotsAttr(Dnn.Module.ModuleID, Content) @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
         <div class="hotspot" @helpers.HotspotDataAndStyle(hotspot, Content)>
-            <div class="hotspot-border"></div>
-            <img src="@App.Path/images/star.svg" alt="@hotspot.Title">
+            @* <div class="hotspot-pulse"></div> *@
+            <img src="@App.Settings.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
         </div>
     }
     <img src="@Content.Image" class="hotspot-image">
@@ -22,14 +22,30 @@
 @foreach (var hotspot in Content.Hotspots) {
     <div id="hotspot-content-@hotspot.EntityId" class="sc-element" style="display: none">
         @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
-        @if(Text.Has(hotspot.Image)) {
-            <img src="@hotspot.Image?w=900&h=300&quality=80&mode=crop" alt="@hotspot.Title">
-        }
-        <div class="fancybox-copy">
-            @Html.Raw(hotspot.Description)
+        <div class="@hotspot.OverlayLayout">
+            @if(Text.Has(hotspot.Image)) {
+                var size = (hotspot.OverlayLayout == "display-flex-row" ? "h=600" : "w=900");
+                <img src="@hotspot.Image?@size&quality=80" alt="@hotspot.Title">
+            }
+
+            @if(Text.Has(hotspot.Description)) {
+                <div class="fancybox-copy">
+                    @Html.Raw(hotspot.Description)
+                </div>
+            }
         </div>
     </div>
 }
 
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js" data-enableoptimizations="false"></script>
 <script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
+
+@* <script>
+$('[data-fancybox]').fancybox({
+    afterShow : function( instance, current ) {
+        imgWidth = $(current.src).find('img').width();
+        $(current.src).find('.fancybox-copy').width(imgWidth);
+        $(current.src + ".fancybox-content").css('opacity', 1)
+	}
+});
+</script> *@
