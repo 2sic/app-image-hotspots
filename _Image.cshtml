@@ -1,14 +1,16 @@
 @inherits ToSic.Sxc.Dnn.RazorComponent
 
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="false">
 
-<div class="image-wrapper" @Edit.TagToolbar(Content)>
-    <div class="hotspots">
-        <div class="hotspot"></div>
-    </div>
-    <img src="@Content.Image">
+<div class="hotspots" @Edit.TagToolbar(Content)>
+    @foreach (var hotspot in Content.Hotspots) {
+        <div class="hotspot" style="top: @hotspot.Y%; left: @hotspot.X%;">
+            <div class="hotspot-border"></div>
+            <img src="@App.Path/images/star.svg" alt="@hotspot.Title">
+        </div>
+    }
+    @* <div class="hotspot" style="top: 11%; left: 18%;"></div> *@
+    <img src="@Content.Image" class="hotspot-image">
 </div>
 
-<hr>
-<h2>Todo</h2>
-Find best way to put the markers on the image. Very likely using JS, because otherwise the image size/responsive will cause positioning problems? Then generate the coordinates etc. from the data
+<script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
