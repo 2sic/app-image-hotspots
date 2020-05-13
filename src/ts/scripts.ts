@@ -6,6 +6,7 @@ const hotspotImages = document.querySelectorAll('.hotspots');
 
 hotspotImages.forEach(el => el.addEventListener('click', event => {
   const target = (event.target as HTMLElement);
+  
   if(!target.classList.contains('hotspot-image')) {
     return false;
   }
