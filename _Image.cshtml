@@ -7,7 +7,7 @@
 
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="false">
 
-<div class="hotspots" @Edit.TagToolbar(Content)>
+<div class="hotspots" data-module-id="@Dnn.Module.ModuleID" data-entity-id="@Content.EntityId" data-guid="@Content.EntityGuid" @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
         <div class="hotspot" style="top: @hotspot.Y%; left: @hotspot.X%;" data-fancybox="hotspots-@Content.EntityId" data-src="#hotspot-content-@hotspot.EntityId">
             <div class="hotspot-border"></div>
