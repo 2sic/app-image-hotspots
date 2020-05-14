@@ -40,7 +40,7 @@
 <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js" data-enableoptimizations="false"></script>
 <script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
 
-@* <script>
+<script>
 $('[data-fancybox]').fancybox({
     afterShow : function( instance, current ) {
         imgWidth = $(current.src).find('img').width();
@@ -48,4 +48,4 @@ $('[data-fancybox]').fancybox({
         $(current.src + ".fancybox-content").css('opacity', 1)
 	}
 });
-</script> *@
+</script>
