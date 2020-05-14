@@ -13,7 +13,7 @@
     @foreach (var hotspot in Content.Hotspots) {
         <div class="hotspot" @helpers.HotspotDataAndStyle(hotspot, Content)>
             @* <div class="hotspot-pulse"></div> *@
-            <img src="@App.Settings.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
+            <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
         </div>
     }
     <img src="@Content.Image" class="hotspot-image">

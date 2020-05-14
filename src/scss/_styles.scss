@@ -39,6 +39,12 @@
     }
   }
 
+  .fancybox-button {
+    svg {
+      filter: drop-shadow(0 0 0px rgba(255,255,255,1));
+    }
+  }
+
   .fancybox-content {
     padding: 0;
     max-width: 80vw;
