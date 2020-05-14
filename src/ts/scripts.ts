@@ -1,4 +1,5 @@
 declare let $2sxc: any;
+declare let fancybox: any;
 
 require('../scss/_Styles.scss');
 
@@ -37,3 +38,13 @@ hotspotImages.forEach(el => el.addEventListener('click', event => {
     }
   });
 }));
+
+($('[data-fancybox]') as any).fancybox({
+  afterShow : function( instance: any, current: any ) {
+      const imgWidth = $(current.src).find('img').width();
+      if(!$(current.src).find('.fancybox-copy').attr('style')) {
+          $(current.src).find('.fancybox-copy').css('max-width', imgWidth);
+      }
+      $(current.src + ".fancybox-content").css('opacity', 1)
+  }
+});
