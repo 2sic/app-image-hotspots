@@ -2,7 +2,7 @@
 @using ToSic.Razor.Blade;
 
 @helper HotspotsAttr(dynamic moduleId, dynamic data) {
-<text>data-module-id="@moduleId" data-transition-effect="rotate" data-entity-id="@data.EntityId" data-guid="@data.EntityGuid" data-iconoffset-x="@App.Settings.HotspotOffsetX" data-iconoffset-y="@App.Settings.HotspotOffsetY"</text>
+<text>data-module-id="@moduleId" data-entity-id="@data.EntityId" data-guid="@data.EntityGuid" data-iconoffset-x="@App.Settings.HotspotOffsetX" data-iconoffset-y="@App.Settings.HotspotOffsetY"</text>
 }
 
 @helper HotspotDataAndStyle(dynamic hotspot, dynamic content) {

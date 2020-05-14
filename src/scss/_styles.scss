@@ -47,7 +47,9 @@
     background-color: #fff;
 
     .display-flex-row {
-      display: flex;
+      @media (min-width: 1024px) {
+        display: flex;
+      }
     }
 
     img {
