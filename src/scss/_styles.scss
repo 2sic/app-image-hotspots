@@ -42,7 +42,7 @@
   .fancybox-content {
     padding: 0;
     max-width: 80vw;
-    min-width: 400px;
+    min-width: 320px;
     opacity: 0;
     background-color: #fff;
 
@@ -59,11 +59,21 @@
 
     .fancybox-copy {
       h2, h3, h4, h5, h6 {
-        margin: 32px 32px 16px;
+        margin: 16px 16px 8px;
       }
 
       p {
-        margin: 16px 32px 32px;
+        margin: 8px 16px 16px;
+      }
+
+      @media (min-width: 1024px) {
+        h2, h3, h4, h5, h6 {
+          margin: 32px 32px 16px;
+        }
+
+        p {
+          margin: 16px 32px 32px;
+        }
       }
     }
   }
