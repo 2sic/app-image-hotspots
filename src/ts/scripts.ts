@@ -21,7 +21,6 @@ if($('body').hasClass('role-admin')) {
     const bounds = target.getBoundingClientRect();
     const iconOffsetX = target.parentElement.dataset.iconoffsetX;
     const iconOffsetY = target.parentElement.dataset.iconoffsetY;
-    console.log(`iconOffsetX: ${iconOffsetX} iconOffsetY: ${iconOffsetX}`)
     const x = e.clientX - bounds.left - parseInt(iconOffsetX);
     const y = e.clientY - bounds.top - parseInt(iconOffsetY);
     const xPercent = x / bounds.width * 100;
@@ -42,12 +41,12 @@ if($('body').hasClass('role-admin')) {
   }));
 }
 
-($('[data-fancybox]') as any).fancybox({
+($('.hotspots').find('[data-fancybox]') as any).fancybox({
   afterShow : function( instance: any, current: any ) {
       const imgWidth = $(current.src).find('img').width();
       if(!$(current.src).find('.fancybox-copy').attr('style')) {
           $(current.src).find('.fancybox-copy').css('max-width', imgWidth);
       }
-      $(current.src + ".fancybox-content").css('opacity', 1)
+      $(current.src + ".fancybox-hotspot-content").css('opacity', 1)
   }
 });

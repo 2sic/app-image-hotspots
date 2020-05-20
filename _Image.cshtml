@@ -20,7 +20,7 @@
 </div>
 
 @foreach (var hotspot in Content.Hotspots) {
-    <div id="hotspot-content-@hotspot.EntityId" class="sc-element" style="display: none">
+    <div id="hotspot-content-@hotspot.EntityId" class="sc-element fancybox-hotspot-content" style="display: none">
         @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
         <div class="@hotspot.OverlayLayout">
             @if(Text.Has(hotspot.Image)) {

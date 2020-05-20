@@ -46,11 +46,13 @@
   }
 
   .fancybox-content {
-    padding: 0;
-    max-width: 80vw;
-    min-width: 320px;
-    opacity: 0;
-    background-color: #fff;
+    &.fancybox-hotspot-content {
+      padding: 0;
+      max-width: 80vw;
+      min-width: 320px;
+      opacity: 0;
+      background-color: #fff;
+    }
 
     .display-flex-row {
       @media (min-width: 1024px) {
