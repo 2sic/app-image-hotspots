@@ -3,41 +3,44 @@ declare let fancybox: any;
 
 require('../scss/_Styles.scss');
 
-const hotspotImages = document.querySelectorAll('.hotspots');
 
-hotspotImages.forEach(el => el.addEventListener('click', event => {
-  const target = (event.target as HTMLElement);
+if($('body').hasClass('role-admin')) {
+  const hotspotImages = document.querySelectorAll('.hotspots');
 
-  if(!target.classList.contains('hotspot-image')) {
-    return false;
-  }
-
-  const e = (event as MouseEvent);
-  const moduleId = target.parentElement.dataset.moduleId;
-  const entityId = target.parentElement.dataset.entityId
-  const guid = target.parentElement.dataset.guid
-  const bounds = target.getBoundingClientRect();
-  const iconOffsetX = target.parentElement.dataset.iconoffsetX;
-  const iconOffsetY = target.parentElement.dataset.iconoffsetY;
-  console.log(`iconOffsetX: ${iconOffsetX} iconOffsetY: ${iconOffsetX}`)
-  const x = e.clientX - bounds.left - parseInt(iconOffsetX);
-  const y = e.clientY - bounds.top - parseInt(iconOffsetY);
-  const xPercent = x / bounds.width * 100;
-  const yPercent = y / bounds.height * 100;
-
-  $2sxc(moduleId).manage.run({
-    'action': 'new',
-    'sortOrder': 0,
-    'isPublished': true,
-    'entityId': entityId,
-    'parent': guid,
-    'fields': 'Hotspots',
-    'prefill': {
-      'X': Math.round(xPercent * 100) / 100,
-      'Y': Math.round(yPercent * 100) / 100
+  hotspotImages.forEach(el => el.addEventListener('click', event => {
+    const target = (event.target as HTMLElement);
+  
+    if(!target.classList.contains('hotspot-image')) {
+      return false;
     }
-  });
-}));
+  
+    const e = (event as MouseEvent);
+    const moduleId = target.parentElement.dataset.moduleId;
+    const entityId = target.parentElement.dataset.entityId
+    const guid = target.parentElement.dataset.guid
+    const bounds = target.getBoundingClientRect();
+    const iconOffsetX = target.parentElement.dataset.iconoffsetX;
+    const iconOffsetY = target.parentElement.dataset.iconoffsetY;
+    console.log(`iconOffsetX: ${iconOffsetX} iconOffsetY: ${iconOffsetX}`)
+    const x = e.clientX - bounds.left - parseInt(iconOffsetX);
+    const y = e.clientY - bounds.top - parseInt(iconOffsetY);
+    const xPercent = x / bounds.width * 100;
+    const yPercent = y / bounds.height * 100;
+  
+    $2sxc(moduleId).manage.run({
+      'action': 'new',
+      'sortOrder': 0,
+      'isPublished': true,
+      'entityId': entityId,
+      'parent': guid,
+      'fields': 'Hotspots',
+      'prefill': {
+        'X': Math.round(xPercent * 100) / 100,
+        'Y': Math.round(yPercent * 100) / 100
+      }
+    });
+  }));
+}
 
 ($('[data-fancybox]') as any).fancybox({
   afterShow : function( instance: any, current: any ) {
