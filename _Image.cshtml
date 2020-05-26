@@ -11,7 +11,7 @@
 
 <div class="hotspots" @helpers.HotspotsAttr(Dnn.Module.ModuleID, Content) @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
-        <div class="hotspot" @helpers.HotspotDataAndStyle(hotspot, Content)>
+        <div class="hotspot" @helpers.HotspotDataAndStyle(hotspot, Content, Dnn.Module.ModuleID)>
             @* <div class="hotspot-pulse"></div> *@
             <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
         </div>
@@ -20,7 +20,7 @@
 </div>
 
 @foreach (var hotspot in Content.Hotspots) {
-    <div id="hotspot-content-@hotspot.EntityId" class="sc-element fancybox-hotspot-content" style="display: none">
+    <div id="hotspot-content-@hotspot.EntityId-@Dnn.Module.ModuleID" class="sc-element fancybox-hotspot-content" style="display: none">
         @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
         <div class="@hotspot.OverlayLayout">
             @if(Text.Has(hotspot.Image)) {
