@@ -1,5 +1,4 @@
 declare let $2sxc: any;
-declare let fancybox: any;
 
 require('../scss/_Styles.scss');
 
@@ -41,7 +40,7 @@ if($('body').hasClass('role-admin')) {
   }));
 }
 
-($('.hotspots').find('[data-fancybox]') as any).fancybox({
+$('.hotspots').find('[data-fancybox]').fancybox({
   afterShow : function( instance: any, current: any ) {
       const imgWidth = $(current.src).find('img').width();
       if(!$(current.src).find('.fancybox-copy').attr('style')) {
