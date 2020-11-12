@@ -3,7 +3,7 @@ declare let $2sxc: any;
 require('../scss/_Styles.scss');
 
 
-if($('body').hasClass('role-admin')) {
+if($('hotspots').hasClass('hotspots-admin')) {
   const hotspotImages = document.querySelectorAll('.hotspots');
 
   hotspotImages.forEach(el => el.addEventListener('click', event => {
