@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.00.00" ModuleVersion="11.07.03" ExportDate="2020-11-12T10:50:39.2034683+01:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="11.90.00" ExportDate="2021-05-04T16:18:41.0546053+02:00">
   <Header>
     <App Guid="a5ad73c1-748a-481f-b08b-f00f5df60e5e" />
     <Language Default="en-us" />
@@ -14,6 +14,56 @@
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
       <Attributes>
+        <Attribute StaticName="AssetsFancybox" Type="String" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="a2048f05-4844-45bd-8a93-4dc944dc1764" Json="True" KeyNumber="4657">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="string-default" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="AssetsFancybox" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="98d97267-f866-4839-b7ff-a4dd353b7e9f" Json="True" KeyNumber="4657">
+            <Value Key="DropdownValues" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-default" AttributeSetName="@string-default" EntityGUID="4eeadc98-489b-4375-b611-a64a515b530b" Json="True" KeyNumber="4657">
+            <Value Key="RowCount" Value="10" Type="Number">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+        </Attribute>
         <Attribute StaticName="HotspotSetting" Type="Entity" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="4eec13c2-f6d5-49ae-8314-090edb64447d" Json="True" KeyNumber="4109">
             <Value Key="CustomJavaScript" Value="" Type="String">
@@ -784,13 +834,22 @@
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="DisplayName" Value="Image Hotspots" Type="String" />
-      <Value Key="Folder" Value="Image Hotspots" Type="String" />
+      <Value Key="DisplayName" Value="Image Hotspots" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Folder" Value="Image Hotspots" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
       <Value Key="Hidden" Value="False" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OriginalId" Value="" Type="String" />
+      <Value Key="OriginalId" Value="" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="RequiredOqtaneVersion" Value="" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="RequiredVersion" Value="11.01.00" Type="String">
@@ -799,9 +858,14 @@
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="01.00.01" Type="String" />
+      <Value Key="Version" Value="01.90.00" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="aac9c44c-4253-44c9-ac75-d7942f1c57d2" KeyNumber="179">
+      <Value Key="AssetsFancybox" Value="&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css&quot; data-enableoptimizations=&quot;bottom&quot; /&gt;&#xA;&lt;script defer src=&quot;https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js&quot; data-enableoptimizations=&quot;bottom&quot;&gt;&lt;/script&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
       <Value Key="HotspotSetting" Value="4b0b491f-69b4-4d57-bdad-7e32eb68cac7" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Resources" AttributeSetName="App-Resources" EntityGUID="ec4ce964-d4aa-4fcf-ac70-ddcf008eb2e8" KeyNumber="179" />
@@ -851,6 +915,21 @@
       <Value Key="ViewNameInUrl" Value="" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="59c4a40e-ef2c-4733-864a-ed5a5ee16fd2" Json="True">
+      <Value Key="Content" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="de5b1eeb-8ea5-4ab3-b7e3-a0efccd467af" Json="True">
+      <Value Key="Content" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="96333953-1473-41e0-be70-44086ea2b2cb" Json="True">
+      <Value Key="Content" Value="8efad1ad-ec92-4890-9d25-d1d7eb3fa7ec" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" AttributeSetName="Image" EntityGUID="8efad1ad-ec92-4890-9d25-d1d7eb3fa7ec">
       <Value Key="Hotspots" Value="b8396edc-e514-4072-9c97-af454fb40ecb,9482fba1-6cf1-4863-b3cb-3d16a776cd68,94830c44-fb70-4789-8ab5-31ef794f2626,cb569fe3-0989-45fd-9565-db2b39d31632" Type="Entity" />
@@ -1156,11 +1235,17 @@
     <Folder Id="10263" RelativePath="adam/Image Hotspots/4-qGQ2iqpEORYjhfTHjnkg/Image/" />
     <Folder Id="10268" RelativePath="adam/Image Hotspots/5tRz6CCH8U-ize1LAk_O8g/" />
     <Folder Id="10269" RelativePath="adam/Image Hotspots/5tRz6CCH8U-ize1LAk_O8g/Image/" />
+    <Folder Id="12674" RelativePath="adam/Image Hotspots/79GRotGdZkC7MdeIB26qWw/" />
+    <Folder Id="12675" RelativePath="adam/Image Hotspots/79GRotGdZkC7MdeIB26qWw/Image/" />
+    <Folder Id="12678" RelativePath="adam/Image Hotspots/C4MJVyYE406XnKbB74p6FQ/" />
+    <Folder Id="12679" RelativePath="adam/Image Hotspots/C4MJVyYE406XnKbB74p6FQ/Image/" />
     <Folder Id="9930" RelativePath="adam/Image Hotspots/CTpjpVOBK0K5_1MW3oWVCw/" />
     <Folder Id="10300" RelativePath="adam/Image Hotspots/-dC53xx0o06u7uALYjX6gw/" />
     <Folder Id="10301" RelativePath="adam/Image Hotspots/-dC53xx0o06u7uALYjX6gw/Image/" />
     <Folder Id="10266" RelativePath="adam/Image Hotspots/Dk7SL6zmn0uH2Xs09_-wGA/" />
     <Folder Id="10267" RelativePath="adam/Image Hotspots/Dk7SL6zmn0uH2Xs09_-wGA/Image/" />
+    <Folder Id="12676" RelativePath="adam/Image Hotspots/dxZnTr-FtEaNqyUXOIIU8Q/" />
+    <Folder Id="12677" RelativePath="adam/Image Hotspots/dxZnTr-FtEaNqyUXOIIU8Q/Image/" />
     <Folder Id="10338" RelativePath="adam/Image Hotspots/eor-iJANz0Wn6Hr8hyE_dA/" />
     <Folder Id="10339" RelativePath="adam/Image Hotspots/eor-iJANz0Wn6Hr8hyE_dA/Image/" />
     <Folder Id="10272" RelativePath="adam/Image Hotspots/Fa0RmCVvV0uJKKTvYbOTVA/" />
@@ -1176,6 +1261,8 @@
     <Folder Id="9932" RelativePath="adam/Image Hotspots/MvK3svsqC0el-K_E3Y_t6A/" />
     <Folder Id="9920" RelativePath="adam/Image Hotspots/ofuClPFsY0izyz0Wp3bNaA/" />
     <Folder Id="9918" RelativePath="adam/Image Hotspots/RAyDlHD7iUeKtTHveU8mJg/" />
+    <Folder Id="12680" RelativePath="adam/Image Hotspots/RC0oddBXi0u4DwSRgnSaVQ/" />
+    <Folder Id="12681" RelativePath="adam/Image Hotspots/RC0oddBXi0u4DwSRgnSaVQ/Image/" />
     <Folder Id="9912" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/" />
     <Folder Id="10264" RelativePath="adam/Image Hotspots/RydwZQTXiki_hK4QycO_JA/" />
     <Folder Id="10265" RelativePath="adam/Image Hotspots/RydwZQTXiki_hK4QycO_JA/Image/" />
@@ -1183,6 +1270,8 @@
     <Folder Id="10277" RelativePath="adam/Image Hotspots/sRtcl8m_f0ya0PidNGvtZQ/Image/" />
     <Folder Id="10342" RelativePath="adam/Image Hotspots/vd6ifxR1VESXn_8eVsRwaQ/" />
     <Folder Id="10343" RelativePath="adam/Image Hotspots/vd6ifxR1VESXn_8eVsRwaQ/Image/" />
+    <Folder Id="10381" RelativePath="adam/Image Hotspots/V-oVBjHYnEmRpCDpdqCxOg/" />
+    <Folder Id="10382" RelativePath="adam/Image Hotspots/V-oVBjHYnEmRpCDpdqCxOg/Image/" />
     <Folder Id="9924" RelativePath="adam/Image Hotspots/wUNVpfwEv066W4p0Fxuf4w/" />
     <Folder Id="9928" RelativePath="adam/Image Hotspots/wz5cVnKeLkqnmKMC8S8q8A/" />
   </PortalFolders>

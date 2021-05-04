@@ -1,0 +1,16 @@
+@inherits Custom.Hybrid.Razor12
+@Html.Raw(App.Settings.AssetsFancybox)
+
+@{
+  // tell DNN to load jquery as it's needed by fancybox
+  // Oqtane doesn't need this, as jQuery is always preloaded as of now
+  #if !NETCOREAPP
+    DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(DotNetNuke.Framework.JavaScriptLibraries.CommonJs.jQuery);
+  #endif
+}
+
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
+<script type="text/javascript">
+  $(function() { if(window.appHotspot) window.appHotspot.activateHotspotAll() });
+</script>

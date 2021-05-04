@@ -1,17 +1,12 @@
-@inherits ToSic.Sxc.Dnn.RazorComponent
+@inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
-@using DotNetNuke.Framework.JavaScriptLibraries;
 @{
-    var helpers = CreateInstance("_Helpers.cshtml");
-    JavaScript.RequestRegistration(CommonJs.jQuery);
+    var helpers = CreateInstance("Helpers.cs");
 }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" data-enableoptimizations="false" />
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="false">
-
-<div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(Dnn.Module.ModuleID, Content) @Edit.TagToolbar(Content)>
+<div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content) @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
-        <div class="hotspot" @helpers.HotspotDataAndStyle(hotspot, Content, Dnn.Module.ModuleID)>
+        <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
             @* <div class="hotspot-pulse"></div> *@
             <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
         </div>
@@ -20,7 +15,7 @@
 </div>
 
 @foreach (var hotspot in Content.Hotspots) {
-    <div id="hotspot-content-@hotspot.EntityId-@Dnn.Module.ModuleID" class="sc-element fancybox-hotspot-content" style="display: none">
+    <div id="hotspot-content-@hotspot.EntityId-@CmsContext.Module.Id" class="sc-element fancybox-hotspot-content" style="display: none">
         @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
         <div class="@hotspot.OverlayLayout">
             @if(Text.Has(hotspot.Image)) {
@@ -39,5 +34,4 @@
     </div>
 }
 
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js" data-enableoptimizations="false"></script>
-<script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
+@Html.Partial("_Assets.cshtml")
