@@ -1,51 +1,25 @@
-declare let $2sxc: any;
+
 require('../scss/_Styles.scss');
 
-if($('.hotspots').hasClass('hotspots-admin')) {
-  const hotspotImages = document.querySelectorAll('.hotspots');
+import { activateFancybox } from './fancybox';
+import { activateAdmin } from './admin';
 
-  hotspotImages.forEach(el => el.addEventListener('click', event => {
-    const target = (event.target as HTMLElement);
-  
-    if(!target.classList.contains('hotspot-image')) {
-      return false;
-    }
-  
-    const e = (event as MouseEvent);
-    const moduleId = target.parentElement.dataset.moduleId;
-    const entityId = target.parentElement.dataset.entityId
-    const guid = target.parentElement.dataset.guid
-    const bounds = target.getBoundingClientRect();
-    const iconOffsetX = target.parentElement.dataset.iconoffsetX;
-    const iconOffsetY = target.parentElement.dataset.iconoffsetY;
-    const x = e.clientX - bounds.left - parseInt(iconOffsetX);
-    const y = e.clientY - bounds.top - parseInt(iconOffsetY);
-    const xPercent = x / bounds.width * 100;
-    const yPercent = y / bounds.height * 100;
-  
-    $2sxc(moduleId).manage.run({
-      'action': 'new',
-      'sortOrder': 0,
-      'isPublished': true,
-      'entityId': entityId,
-      'parent': guid,
-      'fields': 'Hotspots',
-      'prefill': {
-        'X': Math.round(xPercent * 100) / 100,
-        'Y': Math.round(yPercent * 100) / 100
-      }
-    });
-  }));
+/** activate all the hotspot features */
+function activateHotspotAll() {
+  activateFancybox();
+  activateAdmin();
 }
 
-$('.hotspots').find('[data-fancybox]').fancybox({
-  loop: true,
-  afterShow : function( instance: any, current: any ) {
-      console.log(current.src);
-      const imgWidth = $(current.src).find('img').width();
-      if(!$(current.src).find('.fancybox-copy').attr('style')) {
-          $(current.src).find('.fancybox-copy').css('max-width', imgWidth);
-      }
-      $(current.src + ".fancybox-hotspot-content").css('opacity', 1)
-  }
-});
+// Add window.appHotspot.activateAll() 
+// so it can be called from the HTML when content re-initializes dynamically
+const win2GalExt = (window as any);
+const appH = win2GalExt.appHotspot = win2GalExt.appHotspot || {};
+appH.activateHotspotAll = appH.activateHotspotAll || activateHotspotAll;
+
+// If loaded the first time on a dynamic page, activate automatically
+// Later reloads will need to call the activateAll from the reloaded content
+$(activateHotspotAll);
+
+
+
+

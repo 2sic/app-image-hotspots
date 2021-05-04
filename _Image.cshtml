@@ -6,9 +6,6 @@
     JavaScript.RequestRegistration(CommonJs.jQuery);
 }
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" data-enableoptimizations="false" />
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="false">
-
 <div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content) @Edit.TagToolbar(Content)>
     @foreach (var hotspot in Content.Hotspots) {
         <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
@@ -39,5 +36,4 @@
     </div>
 }
 
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js" data-enableoptimizations="false"></script>
-<script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="false"></script>
+@Html.Partial("_Assets.cshtml")

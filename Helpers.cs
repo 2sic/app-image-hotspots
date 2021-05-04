@@ -3,8 +3,7 @@ using ToSic.Razor.Blade;
 public class Helpers: Custom.Hybrid.Code12
 {
   public dynamic HotspotsAttr(dynamic moduleId, dynamic data) {
-  // <text>data-module-id="@moduleId" data-entity-id="@data.EntityId" data-guid="@data.EntityGuid" data-iconoffset-x="@App.Settings.HotspotSetting.HotspotOffsetX" data-iconoffset-y="@App.Settings.HotspotSetting.HotspotOffsetY"</text>
-  return "";
+    return "data-module-id=" + moduleId + " data-entity-id=" + data.EntityId + " data-guid=" + data.EntityGuid + " data-iconoffset-x=" + App.Settings.HotspotSetting.HotspotOffsetX + " data-iconoffset-y=" + App.Settings.HotspotSetting.HotspotOffsetY;
   }
 
   public dynamic HotspotData(dynamic hotspot, dynamic content, dynamic moduleId) {

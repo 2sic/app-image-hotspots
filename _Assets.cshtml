@@ -1,0 +1,7 @@
+@Html.Raw(App.Settings.AssetsFancybox)
+
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="bottom">
+<script src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
+<script>
+  $(function() { if(window.appHotspot) window.appHotspot.activateHotspotAll() });
+</script>
