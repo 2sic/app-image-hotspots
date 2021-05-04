@@ -1,9 +1,10 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
-@using DotNetNuke.Framework.JavaScriptLibraries;
 @{
     var helpers = CreateInstance("Helpers.cs");
-    JavaScript.RequestRegistration(CommonJs.jQuery);
+    #if !NETCOREAPP
+      DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(DotNetNuke.Framework.JavaScriptLibraries.CommonJs.jQuery);
+    #endif
 }
 
 <div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content) @Edit.TagToolbar(Content)>
