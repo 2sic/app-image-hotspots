@@ -6,7 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBar = require('webpackbar');
 
 module.exports = {
-  entry: ['./src/ts/scripts.ts'],
+  entry: ['./src/ts/index.ts'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'scripts.min.js',
