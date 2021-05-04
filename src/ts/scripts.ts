@@ -1,7 +1,5 @@
 declare let $2sxc: any;
-
 require('../scss/_Styles.scss');
-
 
 if($('.hotspots').hasClass('hotspots-admin')) {
   const hotspotImages = document.querySelectorAll('.hotspots');
@@ -41,7 +39,9 @@ if($('.hotspots').hasClass('hotspots-admin')) {
 }
 
 $('.hotspots').find('[data-fancybox]').fancybox({
+  loop: true,
   afterShow : function( instance: any, current: any ) {
+      console.log(current.src);
       const imgWidth = $(current.src).find('img').width();
       if(!$(current.src).find('.fancybox-copy').attr('style')) {
           $(current.src).find('.fancybox-copy').css('max-width', imgWidth);
