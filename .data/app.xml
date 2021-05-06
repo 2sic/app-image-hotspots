@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="11.90.00" ExportDate="2021-05-04T16:18:41.0546053+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="11.90.00" ExportDate="2021-05-04T18:38:04.040839+02:00">
   <Header>
     <App Guid="a5ad73c1-748a-481f-b08b-f00f5df60e5e" />
     <Language Default="en-us" />
@@ -837,7 +837,7 @@
       <Value Key="DisplayName" Value="Image Hotspots" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Folder" Value="Image Hotspots" Type="String">
+      <Value Key="Folder" Value="ImageHotspots" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Hidden" Value="False" Type="Boolean">
@@ -849,16 +849,16 @@
       <Value Key="RequiredDnnVersion" Value="07.02.00" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="02.00.02" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredVersion" Value="11.01.00" Type="String">
+      <Value Key="RequiredVersion" Value="12.00.00" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="01.90.00" Type="String">
+      <Value Key="Version" Value="02.00.00" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1204,7 +1204,6 @@
     <File Id="4506" RelativePath="adam\Image Hotspots\LugSst9hbES92Oc7IVpIlQ\HotspotIcon\white-star.png" />
     <File Id="4507" RelativePath="adam\Image Hotspots\wz5cVnKeLkqnmKMC8S8q8A\HotspotIcon\plus-circle.svg" />
     <File Id="4498" RelativePath="adam\Image Hotspots\CTpjpVOBK0K5_1MW3oWVCw\HotspotIcon\star.svg" />
-    <File Id="4508" RelativePath="adam\Image Hotspots\MvK3svsqC0el-K_E3Y_t6A\HotspotIcon\x-white-bg.png" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="9913" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/Image/" />
@@ -1217,62 +1216,6 @@
     <Folder Id="9927" RelativePath="adam/Image Hotspots/LugSst9hbES92Oc7IVpIlQ/HotspotIcon/" />
     <Folder Id="9929" RelativePath="adam/Image Hotspots/wz5cVnKeLkqnmKMC8S8q8A/HotspotIcon/" />
     <Folder Id="9931" RelativePath="adam/Image Hotspots/CTpjpVOBK0K5_1MW3oWVCw/HotspotIcon/" />
-    <Folder Id="9933" RelativePath="adam/Image Hotspots/MvK3svsqC0el-K_E3Y_t6A/HotspotIcon/" />
-    <Folder Id="7581" RelativePath="adam/Image Hotspots/" />
-    <Folder Id="10270" RelativePath="adam/Image Hotspots/-_7isya1sUOFRvjfUaaIHw/" />
-    <Folder Id="10271" RelativePath="adam/Image Hotspots/-_7isya1sUOFRvjfUaaIHw/Image/" />
-    <Folder Id="10274" RelativePath="adam/Image Hotspots/0kccCuzEBE-qp6sFM66vGQ/" />
-    <Folder Id="10275" RelativePath="adam/Image Hotspots/0kccCuzEBE-qp6sFM66vGQ/Image/" />
-    <Folder Id="10344" RelativePath="adam/Image Hotspots/1pO5Dwp3j0-rC5FQKmaHtw/" />
-    <Folder Id="10345" RelativePath="adam/Image Hotspots/1pO5Dwp3j0-rC5FQKmaHtw/Image/" />
-    <Folder Id="10278" RelativePath="adam/Image Hotspots/2QldPcUfV0qiWqzUQUmsFA/" />
-    <Folder Id="10279" RelativePath="adam/Image Hotspots/2QldPcUfV0qiWqzUQUmsFA/Image/" />
-    <Folder Id="10298" RelativePath="adam/Image Hotspots/-3b51zJuDUqIEsW5FMOlIg/" />
-    <Folder Id="10299" RelativePath="adam/Image Hotspots/-3b51zJuDUqIEsW5FMOlIg/Image/" />
-    <Folder Id="9914" RelativePath="adam/Image Hotspots/3G45uBTlckCcl69FT7QOyw/" />
-    <Folder Id="9916" RelativePath="adam/Image Hotspots/459Wy4kJ_UWVZdsrOdMWMg/" />
-    <Folder Id="10262" RelativePath="adam/Image Hotspots/4-qGQ2iqpEORYjhfTHjnkg/" />
-    <Folder Id="10263" RelativePath="adam/Image Hotspots/4-qGQ2iqpEORYjhfTHjnkg/Image/" />
-    <Folder Id="10268" RelativePath="adam/Image Hotspots/5tRz6CCH8U-ize1LAk_O8g/" />
-    <Folder Id="10269" RelativePath="adam/Image Hotspots/5tRz6CCH8U-ize1LAk_O8g/Image/" />
-    <Folder Id="12674" RelativePath="adam/Image Hotspots/79GRotGdZkC7MdeIB26qWw/" />
-    <Folder Id="12675" RelativePath="adam/Image Hotspots/79GRotGdZkC7MdeIB26qWw/Image/" />
-    <Folder Id="12678" RelativePath="adam/Image Hotspots/C4MJVyYE406XnKbB74p6FQ/" />
-    <Folder Id="12679" RelativePath="adam/Image Hotspots/C4MJVyYE406XnKbB74p6FQ/Image/" />
-    <Folder Id="9930" RelativePath="adam/Image Hotspots/CTpjpVOBK0K5_1MW3oWVCw/" />
-    <Folder Id="10300" RelativePath="adam/Image Hotspots/-dC53xx0o06u7uALYjX6gw/" />
-    <Folder Id="10301" RelativePath="adam/Image Hotspots/-dC53xx0o06u7uALYjX6gw/Image/" />
-    <Folder Id="10266" RelativePath="adam/Image Hotspots/Dk7SL6zmn0uH2Xs09_-wGA/" />
-    <Folder Id="10267" RelativePath="adam/Image Hotspots/Dk7SL6zmn0uH2Xs09_-wGA/Image/" />
-    <Folder Id="12676" RelativePath="adam/Image Hotspots/dxZnTr-FtEaNqyUXOIIU8Q/" />
-    <Folder Id="12677" RelativePath="adam/Image Hotspots/dxZnTr-FtEaNqyUXOIIU8Q/Image/" />
-    <Folder Id="10338" RelativePath="adam/Image Hotspots/eor-iJANz0Wn6Hr8hyE_dA/" />
-    <Folder Id="10339" RelativePath="adam/Image Hotspots/eor-iJANz0Wn6Hr8hyE_dA/Image/" />
-    <Folder Id="10272" RelativePath="adam/Image Hotspots/Fa0RmCVvV0uJKKTvYbOTVA/" />
-    <Folder Id="10273" RelativePath="adam/Image Hotspots/Fa0RmCVvV0uJKKTvYbOTVA/Image/" />
-    <Folder Id="9922" RelativePath="adam/Image Hotspots/H0kLS7RpV029rX4y62jKxw/" />
-    <Folder Id="10340" RelativePath="adam/Image Hotspots/k6pYYBH5w0-pPEWdXLcs2Q/" />
-    <Folder Id="10341" RelativePath="adam/Image Hotspots/k6pYYBH5w0-pPEWdXLcs2Q/Image/" />
-    <Folder Id="10346" RelativePath="adam/Image Hotspots/LJn6cYcAyUuITI5r2pgc0g/" />
-    <Folder Id="10347" RelativePath="adam/Image Hotspots/LJn6cYcAyUuITI5r2pgc0g/Image/" />
-    <Folder Id="9926" RelativePath="adam/Image Hotspots/LugSst9hbES92Oc7IVpIlQ/" />
-    <Folder Id="10260" RelativePath="adam/Image Hotspots/M5fhE6Qe8Eyqf1mCOqovTQ/" />
-    <Folder Id="10261" RelativePath="adam/Image Hotspots/M5fhE6Qe8Eyqf1mCOqovTQ/Image/" />
-    <Folder Id="9932" RelativePath="adam/Image Hotspots/MvK3svsqC0el-K_E3Y_t6A/" />
-    <Folder Id="9920" RelativePath="adam/Image Hotspots/ofuClPFsY0izyz0Wp3bNaA/" />
-    <Folder Id="9918" RelativePath="adam/Image Hotspots/RAyDlHD7iUeKtTHveU8mJg/" />
-    <Folder Id="12680" RelativePath="adam/Image Hotspots/RC0oddBXi0u4DwSRgnSaVQ/" />
-    <Folder Id="12681" RelativePath="adam/Image Hotspots/RC0oddBXi0u4DwSRgnSaVQ/Image/" />
-    <Folder Id="9912" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/" />
-    <Folder Id="10264" RelativePath="adam/Image Hotspots/RydwZQTXiki_hK4QycO_JA/" />
-    <Folder Id="10265" RelativePath="adam/Image Hotspots/RydwZQTXiki_hK4QycO_JA/Image/" />
-    <Folder Id="10276" RelativePath="adam/Image Hotspots/sRtcl8m_f0ya0PidNGvtZQ/" />
-    <Folder Id="10277" RelativePath="adam/Image Hotspots/sRtcl8m_f0ya0PidNGvtZQ/Image/" />
-    <Folder Id="10342" RelativePath="adam/Image Hotspots/vd6ifxR1VESXn_8eVsRwaQ/" />
-    <Folder Id="10343" RelativePath="adam/Image Hotspots/vd6ifxR1VESXn_8eVsRwaQ/Image/" />
-    <Folder Id="10381" RelativePath="adam/Image Hotspots/V-oVBjHYnEmRpCDpdqCxOg/" />
-    <Folder Id="10382" RelativePath="adam/Image Hotspots/V-oVBjHYnEmRpCDpdqCxOg/Image/" />
-    <Folder Id="9924" RelativePath="adam/Image Hotspots/wUNVpfwEv066W4p0Fxuf4w/" />
-    <Folder Id="9928" RelativePath="adam/Image Hotspots/wz5cVnKeLkqnmKMC8S8q8A/" />
+    <Folder Id="12688" RelativePath="adam/ImageHotspots/" />
   </PortalFolders>
 </SexyContent>
