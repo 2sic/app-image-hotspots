@@ -64,9 +64,11 @@ module.exports = {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: [
-                require('autoprefixer')
-              ]
+              postcssOptions: {
+                plugins: [
+                  require('autoprefixer')
+                ]
+              }
             }
           }, {
             loader: 'sass-loader',
@@ -76,7 +78,6 @@ module.exports = {
           }
         ],
       },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
       {
         test: /\.ts$/,
         exclude: /node_modules/,
