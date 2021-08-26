@@ -4,34 +4,38 @@
     var helpers = CreateInstance("Helpers.cs");
 }
 
+@* The visible parts - image and dots to click on *@
 <div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content) @Edit.TagToolbar(Content)>
-    @foreach (var hotspot in Content.Hotspots) {
-        <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
-            @* <div class="hotspot-pulse"></div> *@
-            <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
-        </div>
-    }
-    <img src="@Content.Image" class="hotspot-image">
+  @* The hotspot dots/icons to click on *@
+  @foreach (var hotspot in Content.Hotspots) {
+    <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
+      @* <div class="hotspot-pulse"></div> *@
+      <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
+    </div>
+  }
+  @* The main image, on which the the hotspots are placed *@
+  <img src="@Content.Image" class="hotspot-image">
 </div>
 
+@* This creates the hidden layers which will appear when hotspots are clicked *@
 @foreach (var hotspot in Content.Hotspots) {
-    <div id="hotspot-content-@hotspot.EntityId-@CmsContext.Module.Id" class="sc-element fancybox-hotspot-content" style="display: none">
-        @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
-        <div class="@hotspot.OverlayLayout">
-            @if(Text.Has(hotspot.Image)) {
-                var size = (hotspot.OverlayLayout == "display-flex-row" ? "h=600" : "w=900");
-                <div class="image-wrapper">
-                    <img src="@hotspot.Image?@size&quality=80" alt="@hotspot.Title">
-                </div>
-            }
-
-            @if(Text.Has(hotspot.Description)) {
-                <div class="fancybox-copy">
-                    @Html.Raw(hotspot.Description)
-                </div>
-            }
+  <div id="hotspot-content-@hotspot.EntityId-@CmsContext.Module.Id" class="sc-element fancybox-hotspot-content" style="display: none">
+    @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
+    <div class="@hotspot.OverlayLayout">
+      @if(Text.Has(hotspot.Image)) {
+        var size = (hotspot.OverlayLayout == "display-flex-row" ? "h=600" : "w=900");
+        <div class="image-wrapper">
+          <img src="@hotspot.Image?@size&quality=80" alt="@hotspot.Title">
         </div>
+      }
+
+      @if(Text.Has(hotspot.Description)) {
+        <div class="fancybox-copy">
+          @Html.Raw(hotspot.Description)
+        </div>
+      }
     </div>
+  </div>
 }
 
 @Html.Partial("_Assets.cshtml")
