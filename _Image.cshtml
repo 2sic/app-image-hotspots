@@ -1,12 +1,12 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
 @{
-    var helpers = CreateInstance("Helpers.cs");
+  var helpers = CreateInstance("Helpers.cs");
 }
 
 @* The visible parts - image and dots to click on *@
 <div @Edit.TagToolbar(Content)>
-  <div class='hotspots @(Edit.Enabled && !Content.IsDemoItem ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content)>
+  <div class='hotspots' @helpers.HotspotsAttr(CmsContext.Module.Id, Content)>
     @* The hotspot dots/icons to click on *@
     @foreach (var hotspot in Content.Hotspots) {
       <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>

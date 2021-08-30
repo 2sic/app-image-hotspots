@@ -3,8 +3,8 @@ declare let $2sxc: any;
 /** Loader function for our Hotspot Admin */
 export function activateAdmin() {
   /* Hotspot */
-  $('.hotspots.hotspots-admin').each(function() {
-    $(this).off().on('click', function() {
+  $('.hotspots > img').each(function() {
+    $(this).not('.hotspot').off().on('click', function() {  
       const target = (event.target as HTMLElement);
   
       if(!target.classList.contains('hotspot-image')) {

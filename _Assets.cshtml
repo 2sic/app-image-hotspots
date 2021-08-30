@@ -5,7 +5,9 @@
   * activate jquery using pageservice - if we still need it - probably not?
   * use TurnOn to start it
 *@
-@Html.Raw(App.Settings.AssetsFancybox)
+@{
+  var page = GetService<ToSic.Sxc.Web.IPageService>();  // Service to set titles etc. on the page
+}
 
 @{
   // tell DNN to load jquery as it's needed by fancybox
@@ -17,6 +19,10 @@
 
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
-<script type="text/javascript">
-  $(function() { if(window.appHotspot) window.appHotspot.activateHotspotAll() });
-</script>
+@{
+  page.Activate("turnOn", "fancybox4"); // see https://r.2sxc.org/turnon - fancybox4 is a standard WebResources in 2sxc
+  if(Edit.Enabled) {
+    <turnOn turn-on='{ "await": ["window.$"], "run": "window.appHotspot.activateAdmin()" }'></turnOn>
+  }
+  <turnOn turn-on='{ "await": ["window.Fancybox"], "run": "window.appHotspot.activateFancybox()", "data": { "groupId": "@CmsContext.Module.Id" } }'></turnOn>
+}
