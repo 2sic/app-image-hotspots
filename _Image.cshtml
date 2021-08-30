@@ -5,22 +5,24 @@
 }
 
 @* The visible parts - image and dots to click on *@
-<div class='hotspots @(Edit.Enabled ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content) @Edit.TagToolbar(Content)>
-  @* The hotspot dots/icons to click on *@
-  @foreach (var hotspot in Content.Hotspots) {
-    <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
-      @* <div class="hotspot-pulse"></div> *@
-      <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
-    </div>
-  }
-  @* The main image, on which the the hotspots are placed *@
-  <img src="@Content.Image" class="hotspot-image">
+<div @Edit.TagToolbar(Content)>
+  <div class='hotspots @(Edit.Enabled && !Content.IsDemoItem ? "hotspots-admin" : "")' @helpers.HotspotsAttr(CmsContext.Module.Id, Content)>
+    @* The hotspot dots/icons to click on *@
+    @foreach (var hotspot in Content.Hotspots) {
+      <div class="hotspot" style="@helpers.HotspotStyle(hotspot, Content, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, Content, CmsContext.Module.Id)>
+        @* <div class="hotspot-pulse"></div> *@
+        <img src="@App.Settings.HotspotSetting.HotspotIcon" alt="@hotspot.Title" class="heartbeat">
+      </div>
+    }
+    @* The main image, on which the the hotspots are placed *@
+    <img src="@Content.Image" class="hotspot-image">
+  </div>
 </div>
 
 @* This creates the hidden layers which will appear when hotspots are clicked *@
 @foreach (var hotspot in Content.Hotspots) {
   <div id="hotspot-content-@hotspot.EntityId-@CmsContext.Module.Id" class="sc-element fancybox-hotspot-content" style="display: none">
-    @Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" } )
+    @(Content.IsDemoItem ? "" : Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" }))
     <div class="@hotspot.OverlayLayout">
       @if(Text.Has(hotspot.Image)) {
         var size = (hotspot.OverlayLayout == "display-flex-row" ? "h=600" : "w=900");
