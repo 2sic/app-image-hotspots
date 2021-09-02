@@ -1,20 +1,6 @@
 @inherits Custom.Hybrid.Razor12
-@* Todo
-  * switch to fb4
-  * remove setting for AssetsFancybox as it's not needed any more
-  * activate jquery using pageservice - if we still need it - probably not?
-  * use TurnOn to start it
-*@
 @{
   var page = GetService<ToSic.Sxc.Web.IPageService>();  // Service to set titles etc. on the page
-}
-
-@{
-  // tell DNN to load jquery as it's needed by fancybox
-  // Oqtane doesn't need this, as jQuery is always preloaded as of now
-  #if !NETCOREAPP
-    DotNetNuke.Framework.JavaScriptLibraries.JavaScript.RequestRegistration(DotNetNuke.Framework.JavaScriptLibraries.CommonJs.jQuery);
-  #endif
 }
 
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
@@ -22,7 +8,7 @@
 @{
   page.Activate("turnOn", "fancybox4"); // see https://r.2sxc.org/turnon - fancybox4 is a standard WebResources in 2sxc
   if(Edit.Enabled) {
-    <turnOn turn-on='{ "await": ["window.$"], "run": "window.appHotspot.activateAdmin()" }'></turnOn>
+    <turnOn turn-on='{ "run": "window.appHotspot.activateAdmin()" }'></turnOn>
   }
   <turnOn turn-on='{ "await": ["window.Fancybox"], "run": "window.appHotspot.activateFancybox()", "data": { "groupId": "@CmsContext.Module.Id" } }'></turnOn>
 }
