@@ -1,0 +1,28 @@
+@inherits Custom.Hybrid.Razor12
+@using ToSic.Razor.Blade;
+@{
+  // Get some helper commands for later on
+  var helpers = CreateInstance("Helpers.cs");
+
+  // Merge the settings on Content with the predefined Settings
+  var hotspotApp = Content; // Give it a better name, to make the code more readable
+  var hotspotsSettings = AsDynamic(hotspotApp, Settings);
+}
+
+@* The visible parts - image and dots to click on *@
+<div @Edit.TagToolbar(hotspotApp)>
+  <div class='hotspots' @helpers.HotspotsAttr(CmsContext.Module.Id, hotspotsSettings)>
+    @* The hotspot dots/icons to click on *@
+    @foreach (var hotspot in hotspotsSettings.Hotspots) {
+      <div class="hotspot" style="@helpers.HotspotStyle(hotspot, hotspotsSettings, CmsContext.Module.Id)" @helpers.HotspotData(hotspot, hotspotsSettings, CmsContext.Module.Id)>
+        @* <div class="hotspot-pulse"></div> *@
+        <img loading="lazy" src="@Link.Image(hotspotsSettings.HotspotSetting.HotspotIcon)" alt="@hotspot.Title" class="heartbeat">
+      </div>
+    }
+    @* The main image, on which the the hotspots are placed *@
+    <img loading="lazy" src="@Link.Image(hotspotsSettings.Image, hotspotsSettings.Images.Default)" class="hotspot-image">
+  </div>
+</div>
+
+@Html.Partial("_Hotspots.PartLayers.cshtml", new { HotspotsSettings = hotspotsSettings })
+@Html.Partial("_Hotspots.PartAssets.cshtml")

@@ -1,5 +1,5 @@
 
-require('../scss/_Styles.scss');
+require('../scss/_style.scss');
 
 import { activateAdmin } from './admin';
 import { activateFancybox } from './fancybox';
