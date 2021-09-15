@@ -10,9 +10,15 @@
     @(Content.IsDemoItem ? "" : Edit.Toolbar(hotspot, toolbar: new[] { "%delete&show=true" }))
     <div class="@hotspot.OverlayLayout">
       @if(Text.Has(hotspot.Image)) {
-        @* // TODO 2mh: check why lazy doesnt work and verify if settings are replacable by lightbox default settings: var size = (hotspot.OverlayLayout == "display-flex-row" ? "h=600" : "w=900"); quality 80*@
+        // turn JSON strings from AppSettings into object
+        var imageSettings = AsDynamic(hotspotsSettings.OverlayLayoutSetting);
+
+        // Set image height if OberlayLayout has "display-flex-row" class
+        var imageHeight = (hotspot.OverlayLayout == "display-flex-row" ? imageSettings.imageHeight : 0 );
+        // Set image width only if imageHeight is not set / 0
+        var imageWidth = (imageHeight == 0 ? imageSettings.imageWidth : 0 );
         <div class="image-wrapper">
-          <img src="@Link.Image(hotspot.Image, Settings.Images.Lightbox)" alt="@hotspot.Title">
+          <img src="@Link.Image(url: hotspot.Image, quality: imageSettings.quality, width: imageWidth, height: imageHeight)" alt="@hotspot.Title">
         </div>
       }
 
