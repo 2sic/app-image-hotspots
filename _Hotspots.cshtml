@@ -10,7 +10,7 @@
 }
 
 @* The visible parts - image and dots to click on *@
-<div @Edit.TagToolbar(hotspotApp)>
+<div class="app-hotspot3" @Edit.TagToolbar(hotspotApp)>
   <div class='hotspots' @helpers.HotspotsAttr(CmsContext.Module.Id, hotspotsSettings)>
     @* The hotspot dots/icons to click on *@
     @foreach (var hotspot in hotspotsSettings.Hotspots) {

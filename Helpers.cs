@@ -7,7 +7,7 @@ public class Helpers: Custom.Hybrid.Code12
   }
 
   public dynamic HotspotData(dynamic hotspot, dynamic content, dynamic moduleId) {
-    return "data-app-hotspot-fancybox=hotspots-" + moduleId + " data-src=#hotspot-content-" + hotspot.EntityId + "-" + moduleId;
+    return "data-app-hotspot-fancybox=" + moduleId + " data-src=#hotspot-content-" + hotspot.EntityId + "-" + moduleId;
   }
 
   public dynamic HotspotStyle(dynamic hotspot, dynamic content, dynamic moduleId) {
