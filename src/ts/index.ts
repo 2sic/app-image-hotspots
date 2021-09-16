@@ -5,10 +5,6 @@ import { activateAdmin } from './admin';
 import { activateFancybox } from './fancybox';
 
 const winAny = (window as any);
-winAny.appHotspot = winAny.appHotspot || {};
-winAny.appHotspot.activateAdmin = winAny.appHotspot.activateAdmin || activateAdmin;
-winAny.appHotspot.activateFancybox = winAny.appHotspot.activateFancybox || activateFancybox
-
-
-
-
+winAny.appHotspot3 = winAny.appHotspot3 || {};
+winAny.appHotspot3.activateAdmin = winAny.appHotspot3.activateAdmin || activateAdmin;
+winAny.appHotspot3.activateFancybox = winAny.appHotspot3.activateFancybox || activateFancybox;
