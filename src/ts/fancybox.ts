@@ -2,7 +2,7 @@ declare let Fancybox: any;
 
 /** Loader function for our Fancybox */
 export function activateFancybox({ groupId } : { groupId: string }) {
-  Fancybox.bind(`[data-app-hotspot-fancybox="${groupId}"]`, {
+  Fancybox.bind(`[data-app-hotspot3-fancybox="${groupId}"]`, {
     groupAll: true,
     Thumbs: {
       autoStart: false
