@@ -6,7 +6,6 @@
 
 A awesome image hotspots app to use with 2sxc
 
-
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
 | 2sxc                | ✅    | Hotspot v3 requires 2sxc v12.05
@@ -31,3 +30,10 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 Read more about it in the [App Catalog](https://2sxc.org/en/apps/app/image-hotspots)
 
+## History
+
+* 2021-09 v3
+  * Update to 2sxc 12.05 standard
+  * Hybrid for Dnn & Oqtane
+  * dropped jQuery
+  * cleaner code
