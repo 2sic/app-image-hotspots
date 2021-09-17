@@ -17,7 +17,9 @@
         var imageHeight = (hotspot.OverlayLayout == "display-flex-row" ? imageSettings.imageHeight : 0 );
         // Set image width only if imageHeight is not set / 0
         var imageWidth = (imageHeight == 0 ? imageSettings.imageWidth : 0 );
-        <img src="@Link.Image(url: hotspot.Image, quality: imageSettings.quality, width: imageWidth, height: imageHeight)" alt="@hotspot.Title">
+        <div class="fancybox-image">
+          <img src="@Link.Image(url: hotspot.Image, quality: imageSettings.quality, width: imageWidth, height: imageHeight)" alt="@hotspot.Title">
+        </div>
       }
 
       @if(Text.Has(hotspot.Description)) {
