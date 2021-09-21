@@ -10,8 +10,8 @@ export function activateFancybox({ groupId } : { groupId: string }) {
     on: {  
       done: (fancybox: any, slide: any) => {
         const imgWidth = document.querySelector(`${slide.src} img`).getBoundingClientRect().width
-        let fancyboxText: HTMLElement = document.querySelector(`${slide.src} .fancybox-text`)
-        let hotspotContent: HTMLElement = document.querySelector(`${slide.src}.fancybox-hotspot-content`)
+        let fancyboxText: HTMLElement = document.querySelector(`${slide.src} .hotspot3-fancybox-text`)
+        let hotspotContent: HTMLElement = document.querySelector(`${slide.src}.hotspot3-fancybox-content`)
         if(!fancyboxText.hasAttribute('style')) fancyboxText.style.maxWidth = `${Math.floor(imgWidth)}px`
         hotspotContent.style.opacity = "1"
       }

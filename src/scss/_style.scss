@@ -16,7 +16,7 @@
 */
 
 .app-hotspot3 {
-  .hotspot-image {
+  .hotspot3-image {
     max-width: 100%;
     height: auto;
   }
@@ -25,7 +25,7 @@
     display: inline-block;
     position: relative;
 
-    .hotspot-marker {
+    .hotspot3-marker {
       position: absolute;
       width: 30px;
       height: 30px;
@@ -85,7 +85,7 @@
 }
 
 .fancybox__content {
-  &.fancybox-hotspot-content {
+  &.hotspot3-fancybox-content {
     padding: 0;
     max-width: 80vw;
     min-width: 320px;
@@ -106,7 +106,7 @@
     height: 100%;
   }
 
-  .fancybox-text {
+  .hotspot3-fancybox-text {
     min-width: 320px;
     
     h2, h3, h4, h5, h6 {

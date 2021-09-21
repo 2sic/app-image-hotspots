@@ -17,12 +17,12 @@
     @foreach (var marker in sharedSettings.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults
       var markerSettings = AsDynamic(marker, hotspots, Settings);
-      <div class="hotspot-marker" style="@helpers.MarkerStyles(marker, markerSettings)" data-app-hotspot3-fancybox='@moduleId' data-src='#hotspot-content-@marker.EntityId-@moduleId'>
+      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" data-app-hotspot3-fancybox='@moduleId' data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
         <img loading="lazy" src="@Link.Image(markerSettings.HotspotSetting.HotspotIcon)" alt="@marker.Title" class="heartbeat">
       </div>
     }
     @* The main image, on which the the hotspots are placed *@
-    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Default)" class="hotspot-image">
+    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Default)" class="hotspot3-image">
   </div>
 </div>
 

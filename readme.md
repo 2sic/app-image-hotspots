@@ -2,7 +2,7 @@
 
 # Image Hotspots 3 - Hotspot App
 
-> This is a 2sxc App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
+> This is a ]2sxc](https://2sxc.org/) App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
 
 A awesome image hotspots app to use with 2sxc
 

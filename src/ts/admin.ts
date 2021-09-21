@@ -9,7 +9,7 @@ export function activateAdmin() {
     if(!hsElem.classList.contains('added-listener')) {
       hsElem.addEventListener('click', () => {  
 
-        if(!hsElem.classList.contains('hotspot-image')) {
+        if(!hsElem.classList.contains('hotspot3-image')) {
           return false;
         }
 
