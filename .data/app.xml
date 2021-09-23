@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-21T08:50:30.0650962+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-23T22:41:45.2646653+02:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -14,14 +14,97 @@
     </AttributeSet>
     <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
       <Attributes>
-        <Attribute StaticName="OverlayLayoutSetting" Type="Custom" IsTitle="false">
-          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="ba66ca06-bdc0-428c-8e5d-ae82afefaa7a" Json="True" KeyNumber="4837">
-            <Value Key="InputType" Value="custom-json-editor" Type="String" />
-            <Value Key="Name" Value="OverlayLayoutSetting" Type="String" />
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+        <Attribute StaticName="OverlayImageMaxWidth" Type="Number" IsTitle="true">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b601416b-4f68-4a63-b93e-135094f1f736" Json="True" KeyNumber="4858">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="number-default" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="Maximum width for overlay image" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="Maximale breite für Overlay-Bild" Type="String">
+              <Dimension DimensionID="157" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="23dc3ebc-ec19-4f48-974b-cdf91b3ddce7" Json="True" KeyNumber="4858">
+            <Value Key="Decimals" Value="0" Type="Number">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
           </Entity>
         </Attribute>
-        <Attribute StaticName="HotspotSetting" Type="Entity" IsTitle="true">
+        <Attribute StaticName="OverlayImageMaxHeight" Type="Number" IsTitle="false">
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="9e1cb74a-da76-4965-9502-f9c8149d4cf9" Json="True" KeyNumber="4860">
+            <Value Key="CustomJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DefaultValue" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Disabled" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="number-default" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="Maximum height for overlay image" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="Maximale höhe für Overlay-Bild" Type="String">
+              <Dimension DimensionID="157" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Required" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="ValidationRegExJavaScript" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+          <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@Number" AttributeSetName="@Number" EntityGUID="f5fe150f-cb87-4648-86db-0e021105fa12" Json="True" KeyNumber="4860">
+            <Value Key="Decimals" Value="0" Type="Number">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+          </Entity>
+        </Attribute>
+        <Attribute StaticName="HotspotMarker" Type="Entity" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="4eec13c2-f6d5-49ae-8314-090edb64447d" Json="True" KeyNumber="4109">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
@@ -38,7 +121,7 @@
             <Value Key="InputType" Value="entity-default" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="Name" Value="Hotspot Setting" Type="String">
+            <Value Key="Name" Value="Hotspot Marker" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Notes" Value="" Type="String">
@@ -70,13 +153,13 @@
             <Value Key="EnableDelete" Value="False" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="EnableEdit" Value="False" Type="Boolean">
+            <Value Key="EnableEdit" Value="True" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="EnableRemove" Value="True" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="EntityType" Value="HotspotSettings" Type="String">
+            <Value Key="EntityType" Value="HotspotMarkers" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Prefill" Value="" Type="String">
@@ -252,13 +335,23 @@
             <Value Key="Disabled" Value="False" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="InputType" Value="string-dropdown" Type="String" />
-            <Value Key="Name" Value="Overlay Layout" Type="String" />
+            <Value Key="DisableTranslation" Value="False" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="InputType" Value="string-dropdown" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="Name" Value="Overlay Layout" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
             <Value Key="Notes" Value="&lt;p&gt;Select how text/image should be aligned in the Fancybox.&lt;/p&gt;" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Notes" Value="&lt;p&gt;W&amp;auml;hle aus wie Text/Bild in der Fancybox ausgerichtet sein sollen.&lt;/p&gt;" Type="String">
               <Dimension DimensionID="157" ReadOnly="false" />
+            </Value>
+            <Value Key="Placeholder" Value="" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Required" Value="False" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
@@ -266,7 +359,9 @@
             <Value Key="ValidationRegExJavaScript" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="VisibleInEditUI" Value="True" Type="Boolean" />
+            <Value Key="VisibleInEditUI" Value="True" Type="Boolean">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
           </Entity>
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@String" AttributeSetName="@String" EntityGUID="95c40893-b22f-4f01-882a-d309f8c4c55f" Json="True" KeyNumber="4093">
             <Value Key="DropdownValues" Value="" Type="String">
@@ -277,7 +372,13 @@
             </Value>
           </Entity>
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@string-dropdown" AttributeSetName="@string-dropdown" EntityGUID="572224bd-4d08-499c-b2b9-be092bce7f80" Json="True" KeyNumber="4093">
-            <Value Key="DropdownValues" Value="Text Top, Image Bottom:display-flex-column&#xA;Text Right, Image Left:display-flex-row" Type="String">
+            <Value Key="DropdownValues" Value="img/text:Text below image&#xA;img-text:Text beside image" Type="String">
+              <Dimension DimensionID="156" ReadOnly="false" />
+            </Value>
+            <Value Key="DropdownValues" Value="img/text:Text unter dem Bild&#xA;img-text:Text neben dem Bild" Type="String">
+              <Dimension DimensionID="157" ReadOnly="false" />
+            </Value>
+            <Value Key="DropdownValuesFormat" Value="value-label" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="EnableTextEntry" Value="False" Type="Boolean">
@@ -324,7 +425,7 @@
             </Value>
           </Entity>
         </Attribute>
-        <Attribute StaticName="HotspotSetting" Type="Entity" IsTitle="false">
+        <Attribute StaticName="HotspotMarker" Type="Entity" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="35e2a57a-0ef8-42c8-8718-b963591a8e98" Json="True" KeyNumber="4838">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
@@ -341,13 +442,16 @@
             <Value Key="InputType" Value="entity-default" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="Name" Value="Marker" Type="String">
+            <Value Key="Name" Value="Marker (leave empty to use default)" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="Notes" Value="&lt;p&gt;leave empty to use app default&lt;/p&gt;" Type="String">
+            <Value Key="Name" Value="Pin/Marker (leer lassen um den Standard-Pin zu nutzen)" Type="String">
+              <Dimension DimensionID="157" ReadOnly="false" />
+            </Value>
+            <Value Key="Notes" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="Notes" Value="&lt;p&gt;Wenn dies nicht gesetzt ist, wird der App-Standard verwendet.&lt;/p&gt;" Type="String">
+            <Value Key="Notes" Value="" Type="String">
               <Dimension DimensionID="157" ReadOnly="false" />
             </Value>
             <Value Key="Placeholder" Value="" Type="String">
@@ -382,7 +486,7 @@
             <Value Key="EnableRemove" Value="True" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="EntityType" Value="HotspotTypes" Type="String">
+            <Value Key="EntityType" Value="HotspotMarkers" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Prefill" Value="" Type="String">
@@ -482,7 +586,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" Name="HotspotTypes" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" Name="HotspotMarkers" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="aecaf22a-48ae-4598-a4eb-0471031c46bd" Json="True" KeyNumber="4108">
@@ -824,7 +928,7 @@
             <Value Key="ShowPagePicker" Value="False" Type="Boolean" />
           </Entity>
         </Attribute>
-        <Attribute StaticName="HotspotSetting" Type="Entity" IsTitle="false">
+        <Attribute StaticName="HotspotMarker" Type="Entity" IsTitle="false">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="95492208-7767-413f-a790-2014b0ce2339" Json="True" KeyNumber="4839">
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
@@ -882,7 +986,7 @@
             <Value Key="EnableRemove" Value="True" Type="Boolean">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="EntityType" Value="" Type="String">
+            <Value Key="EntityType" Value="HotspotMarkers" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Prefill" Value="" Type="String">
@@ -1003,8 +1107,11 @@
       </Value>
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="aac9c44c-4253-44c9-ac75-d7942f1c57d2" KeyNumber="179">
-      <Value Key="HotspotSetting" Value="4b0b491f-69b4-4d57-bdad-7e32eb68cac7" Type="Entity" />
-      <Value Key="OverlayLayoutSetting" Value="{&#xD;&#xA;   &#x9;&quot;imageHeight&quot;: 600,&#xD;&#xA;&#x9;&quot;imageWidth&quot;: 900,&#xD;&#xA;&#x9;&quot;quality&quot;: 80&#xD;&#xA;}" Type="Custom">
+      <Value Key="HotspotMarker" Value="4b0b491f-69b4-4d57-bdad-7e32eb68cac7" Type="Entity" />
+      <Value Key="OverlayImageMaxHeight" Value="500" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayImageMaxWidth" Value="1000" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1087,7 +1194,7 @@
       <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" AttributeSetName="ImageWithHotspots" EntityGUID="8efad1ad-ec92-4890-9d25-d1d7eb3fa7ec">
-      <Value Key="Hotspots" Value="b8396edc-e514-4072-9c97-af454fb40ecb,9482fba1-6cf1-4863-b3cb-3d16a776cd68,94830c44-fb70-4789-8ab5-31ef794f2626,cb569fe3-0989-45fd-9565-db2b39d31632" Type="Entity" />
+      <Value Key="Hotspots" Value="b8396edc-e514-4072-9c97-af454fb40ecb,9482fba1-6cf1-4863-b3cb-3d16a776cd68,94830c44-fb70-4789-8ab5-31ef794f2626,cb569fe3-0989-45fd-9565-db2b39d31632,b9d26a53-b66a-4d86-aa16-c39ccda64bef,30d9f440-b023-4dd1-872e-40fe2c41cdbc,84803732-700a-4d4e-8888-ba1387a77463,d06491e1-430c-4b16-b6fc-353d321a4c9f" Type="Entity" />
       <Value Key="Image" Value="file:4484" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1099,11 +1206,11 @@
       <Value Key="Description" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.&lt;/p&gt;" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="HotspotSetting" Value="b212e82e-61df-446c-bdd8-e73b215a4895" Type="Entity" />
+      <Value Key="HotspotMarker" Value="b212e82e-61df-446c-bdd8-e73b215a4895" Type="Entity" />
       <Value Key="Image" Value="file:4512" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OverlayLayout" Value="display-flex-column" Type="String">
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Schalthebel" Type="String">
@@ -1123,7 +1230,7 @@
       <Value Key="Image" Value="file:4511" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OverlayLayout" Value="display-flex-column" Type="String">
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Bordcomputer" Type="String">
@@ -1143,7 +1250,7 @@
       <Value Key="Image" Value="file:4509" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OverlayLayout" Value="display-flex-row" Type="String">
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Bedienelemente" Type="String">
@@ -1163,7 +1270,7 @@
       <Value Key="Image" Value="file:4510" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OverlayLayout" Value="display-flex-row" Type="String">
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Title" Value="Boxen" Type="String">
@@ -1176,7 +1283,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="4b0b491f-69b4-4d57-bdad-7e32eb68cac7">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="4b0b491f-69b4-4d57-bdad-7e32eb68cac7">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1196,7 +1303,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="a55543c1-04fc-4ebf-ba5b-8a74171b9fe3">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="a55543c1-04fc-4ebf-ba5b-8a74171b9fe3">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1216,7 +1323,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="b212e82e-61df-446c-bdd8-e73b215a4895">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="b212e82e-61df-446c-bdd8-e73b215a4895">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1236,7 +1343,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="565c3ec3-9e72-4a2e-a798-a302f12f2af0">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="565c3ec3-9e72-4a2e-a798-a302f12f2af0">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1256,7 +1363,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="a5633a09-8153-422b-b9ff-5316de85950b">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="a5633a09-8153-422b-b9ff-5316de85950b">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1276,7 +1383,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
-    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotTypes" EntityGUID="b2b7f232-2afb-470b-a5f8-afc4dd8fede8">
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" AttributeSetName="HotspotMarkers" EntityGUID="b2b7f232-2afb-470b-a5f8-afc4dd8fede8">
       <Value Key="HotspotHeight" Value="30px" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1338,7 +1445,7 @@
       <Value Key="Icon" Value="" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Label" Value="Hotspot Types" Type="String">
+      <Value Key="Label" Value="Hotspot Marker Types" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Label" Value="Hotspot-Typen" Type="String">
@@ -1406,6 +1513,86 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="b9d26a53-b66a-4d86-aa16-c39ccda64bef">
+      <Value Key="Description" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6027" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="very wide, above text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="10" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="50" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="30d9f440-b023-4dd1-872e-40fe2c41cdbc">
+      <Value Key="Description" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6028" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="very wide, beside text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="20" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="50" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="84803732-700a-4d4e-8888-ba1387a77463">
+      <Value Key="Description" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6025" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="very tall, above text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="30" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="50" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="d06491e1-430c-4b16-b6fc-353d321a4c9f">
+      <Value Key="Description" Value="&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6026" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="very tall, beside text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="40" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="50" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
@@ -1418,6 +1605,15 @@
     <File Id="4506" RelativePath="adam\Image Hotspots\LugSst9hbES92Oc7IVpIlQ\HotspotIcon\white-star.png" />
     <File Id="4507" RelativePath="adam\Image Hotspots\wz5cVnKeLkqnmKMC8S8q8A\HotspotIcon\plus-circle.svg" />
     <File Id="4498" RelativePath="adam\Image Hotspots\CTpjpVOBK0K5_1MW3oWVCw\HotspotIcon\star.svg" />
+    <File Id="6027" RelativePath="adam\ImageHotspots3\U2rSuWq2hk2qFsOczaZL7w\Image\image.png" />
+    <File Id="6028" RelativePath="adam\ImageHotspots3\QPTZMCOw0U2HLkD-LEHNvA\Image\image.png" />
+    <File Id="6025" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img-2.png" />
+    <File Id="6026" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img-2.png" />
+    <File Id="6016" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img.png" />
+    <File Id="6012" RelativePath="adam\ImageHotspots3\eR610vO6WUildXa0O8uZHA\Image\Platzhalterbild_Inhalt-1.jpg" />
+    <File Id="6015" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img.png" />
+    <File Id="6014" RelativePath="adam\ImageHotspots3\QPTZMCOw0U2HLkD-LEHNvA\Image\wide img.png" />
+    <File Id="6013" RelativePath="adam\ImageHotspots3\U2rSuWq2hk2qFsOczaZL7w\Image\wide img.png" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="9913" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/Image/" />
@@ -1430,6 +1626,16 @@
     <Folder Id="9927" RelativePath="adam/Image Hotspots/LugSst9hbES92Oc7IVpIlQ/HotspotIcon/" />
     <Folder Id="9929" RelativePath="adam/Image Hotspots/wz5cVnKeLkqnmKMC8S8q8A/HotspotIcon/" />
     <Folder Id="9931" RelativePath="adam/Image Hotspots/CTpjpVOBK0K5_1MW3oWVCw/HotspotIcon/" />
+    <Folder Id="13419" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/Image/" />
+    <Folder Id="13421" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/Image/" />
+    <Folder Id="13423" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/Image/" />
+    <Folder Id="13425" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/Image/" />
+    <Folder Id="13417" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/Image/" />
     <Folder Id="13410" RelativePath="adam/ImageHotspots3/" />
+    <Folder Id="13424" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/" />
+    <Folder Id="13416" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/" />
+    <Folder Id="13422" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/" />
+    <Folder Id="13420" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/" />
+    <Folder Id="13418" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/" />
   </PortalFolders>
 </SexyContent>
