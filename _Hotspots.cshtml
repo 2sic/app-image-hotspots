@@ -8,17 +8,11 @@
   var hotspots = Content; // give it a nicer name so the code is easier to read
   var sharedSettings = AsDynamic(hotspots, Settings);
   var moduleId = CmsContext.Module.Id;
-
-  // TODO: 
-  // - very tall images fail!
-  // - adding dots fails!
-
-  
 }
 
 @* The visible parts - image and dots to click on *@
 <div class="app-hotspot3" @Edit.TagToolbar(hotspots)>
-  <div class='hotspots' @Html.Raw(helpers.EditAttr(moduleId, hotspots, sharedSettings)) >
+  <div class="hotspots" @Html.Raw(helpers.EditAttr(moduleId, hotspots, sharedSettings)) >
     @* The hotspot dots/icons to click on *@
     @foreach (var marker in sharedSettings.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
@@ -28,8 +22,9 @@
         <img loading="lazy" src="@Link.Image(markerSettings.HotspotMarker.HotspotIcon)" alt="@marker.Title" class="heartbeat">
       </div>
     }
-    @* The main image, on which the the hotspots are placed *@
-    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Content)" class="hotspot3-image">
+
+    @* The main image, on which the the hotspots are placed - will adhere to "Content" image conventions *@
+    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Content)" class="hotspot3-image hotspot3-js-image">
   </div>
 </div>
 
