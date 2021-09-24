@@ -24,7 +24,7 @@
     }
 
     @* The main image, on which the the hotspots are placed - will adhere to "Content" image conventions *@
-    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Content)" class="hotspot3-image hotspot3-js-image">
+    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Content)" class='hotspot3-image @(hotspots.IsDemoItem ? "" : "hotspot3-js-image")'>
   </div>
 </div>
 
