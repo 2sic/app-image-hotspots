@@ -5,13 +5,12 @@
 }
 @* This creates the hidden layers which will appear when hotspots are clicked *@
 @foreach (var hotspot in hotspotsSettings.Hotspots) {
-  var layoutClass = hotspot.OverlayLayout == "img/text" // alternative is img-text
-    ? ""
-    : "display-flex-row";
+  var imgIsAbove = hotspot.OverlayLayout == "img/text"; // alternative is img-text
+  var layoutClass = imgIsAbove ? "" : "display-flex-row";
 
   // Set image height / width based on layout type
-  var imageWidth = (int)hotspotsSettings.OverlayImageMaxWidth * (hotspot.OverlayLayout != "img-text" ? 1 : 0.75);
-  var imageHeight = (int)hotspotsSettings.OverlayImageMaxHeight * (hotspot.OverlayLayout == "img-text" ? 0.6 : 1);
+  var imageWidth = (int)hotspotsSettings.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75);
+  var imageHeight = (int)hotspotsSettings.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 );
 
   var toolbar = Content.IsDemoItem ? "" : Edit.TagToolbar(hotspot, toolbar: new[] { "%delete&show=true" });
   <div id="hotspot3-content-@hotspot.EntityId-@CmsContext.Module.Id" class="hotspot3-fancybox-content" style="display: none" @toolbar>

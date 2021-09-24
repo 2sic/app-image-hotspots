@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-23T22:41:45.2646653+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-09-24T13:19:02.276148+02:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -329,7 +329,7 @@
             <Value Key="CustomJavaScript" Value="" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
-            <Value Key="DefaultValue" Value="display-flex-column" Type="String">
+            <Value Key="DefaultValue" Value="img-text" Type="String">
               <Dimension DimensionID="156" ReadOnly="false" />
             </Value>
             <Value Key="Disabled" Value="False" Type="Boolean">
@@ -1108,10 +1108,10 @@
     </Entity>
     <Entity AssignmentObjectType="App" AttributeSetStaticName="App-Settings" AttributeSetName="App-Settings" EntityGUID="aac9c44c-4253-44c9-ac75-d7942f1c57d2" KeyNumber="179">
       <Value Key="HotspotMarker" Value="4b0b491f-69b4-4d57-bdad-7e32eb68cac7" Type="Entity" />
-      <Value Key="OverlayImageMaxHeight" Value="500" Type="Number">
+      <Value Key="OverlayImageMaxHeight" Value="800" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="OverlayImageMaxWidth" Value="1000" Type="Number">
+      <Value Key="OverlayImageMaxWidth" Value="1200" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1194,7 +1194,7 @@
       <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
     </Entity>
     <Entity AssignmentObjectType="Default" AttributeSetStaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" AttributeSetName="ImageWithHotspots" EntityGUID="8efad1ad-ec92-4890-9d25-d1d7eb3fa7ec">
-      <Value Key="Hotspots" Value="b8396edc-e514-4072-9c97-af454fb40ecb,9482fba1-6cf1-4863-b3cb-3d16a776cd68,94830c44-fb70-4789-8ab5-31ef794f2626,cb569fe3-0989-45fd-9565-db2b39d31632,b9d26a53-b66a-4d86-aa16-c39ccda64bef,30d9f440-b023-4dd1-872e-40fe2c41cdbc,84803732-700a-4d4e-8888-ba1387a77463,d06491e1-430c-4b16-b6fc-353d321a4c9f" Type="Entity" />
+      <Value Key="Hotspots" Value="b8396edc-e514-4072-9c97-af454fb40ecb,5da78337-733e-4231-b1c0-3556137176bf,3d187524-eaf2-4951-8bd3-ff8ac7d4eedb,3bd2bab7-06f3-4935-ba7c-477547aa5bad,f30aee52-cfa6-4e54-a325-f264eb2a7422,9482fba1-6cf1-4863-b3cb-3d16a776cd68,94830c44-fb70-4789-8ab5-31ef794f2626,cb569fe3-0989-45fd-9565-db2b39d31632,b9d26a53-b66a-4d86-aa16-c39ccda64bef,30d9f440-b023-4dd1-872e-40fe2c41cdbc,84803732-700a-4d4e-8888-ba1387a77463,d06491e1-430c-4b16-b6fc-353d321a4c9f" Type="Entity" />
       <Value Key="Image" Value="file:4484" Type="Hyperlink">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1216,7 +1216,7 @@
       <Value Key="Title" Value="Schalthebel" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="X" Value="51.34" Type="Number">
+      <Value Key="X" Value="53" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Y" Value="63.39" Type="Number">
@@ -1239,7 +1239,7 @@
       <Value Key="X" Value="49.05" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Y" Value="22.36" Type="Number">
+      <Value Key="Y" Value="24" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1276,7 +1276,7 @@
       <Value Key="Title" Value="Boxen" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="X" Value="70.34" Type="Number">
+      <Value Key="X" Value="83" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="Y" Value="60.9" Type="Number">
@@ -1593,6 +1593,86 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="f30aee52-cfa6-4e54-a325-f264eb2a7422">
+      <Value Key="Description" Value="&lt;p&gt;This wonderful sky scraper is to test extreme image dimensions and verify that they look great.&amp;nbsp;&lt;/p&gt;&#xA;&lt;p&gt;Don't you just 💖 it ?&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6030" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Example with a very tall image on the side" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="62.94" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="3.71" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="3bd2bab7-06f3-4935-ba7c-477547aa5bad">
+      <Value Key="Description" Value="&lt;p&gt;This is another example for extreme dimensions. Very tall image on top.&lt;/p&gt;&#xA;&lt;p&gt;What do you think about this?&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6030" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Example with very tall image on top" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="55.69" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="3.46" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="3d187524-eaf2-4951-8bd3-ff8ac7d4eedb">
+      <Value Key="Description" Value="&lt;p&gt;Extreme example of very wide image&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6031" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Air vent very wide" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="84.94" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="35.97" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="5da78337-733e-4231-b1c0-3556137176bf">
+      <Value Key="Description" Value="&lt;p&gt;Extreme example of wide image - above text&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Image" Value="file:6031" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img/text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Extreme example of wide image" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="88.06" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="35.67" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
@@ -1609,6 +1689,8 @@
     <File Id="6028" RelativePath="adam\ImageHotspots3\QPTZMCOw0U2HLkD-LEHNvA\Image\image.png" />
     <File Id="6025" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img-2.png" />
     <File Id="6026" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img-2.png" />
+    <File Id="6030" RelativePath="adam\ImageHotspots3\Uu4K86bPVE6jJfJk6yp0Ig\Image\createtravel-tv-qS9W_cuRKfI-unsplash.jpg" />
+    <File Id="6031" RelativePath="adam\ImageHotspots3\JHUYPfLqUUmL0_-Kx9Tu2w\Image\the-blowup-oW5pE7oK73I-unsplash.jpg" />
     <File Id="6016" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img.png" />
     <File Id="6012" RelativePath="adam\ImageHotspots3\eR610vO6WUildXa0O8uZHA\Image\Platzhalterbild_Inhalt-1.jpg" />
     <File Id="6015" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img.png" />
@@ -1630,12 +1712,16 @@
     <Folder Id="13421" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/Image/" />
     <Folder Id="13423" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/Image/" />
     <Folder Id="13425" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/Image/" />
+    <Folder Id="13430" RelativePath="adam/ImageHotspots3/Uu4K86bPVE6jJfJk6yp0Ig/Image/" />
+    <Folder Id="13432" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/Image/" />
     <Folder Id="13417" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/Image/" />
     <Folder Id="13410" RelativePath="adam/ImageHotspots3/" />
     <Folder Id="13424" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/" />
     <Folder Id="13416" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/" />
+    <Folder Id="13431" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/" />
     <Folder Id="13422" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/" />
     <Folder Id="13420" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/" />
     <Folder Id="13418" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/" />
+    <Folder Id="13429" RelativePath="adam/ImageHotspots3/Uu4K86bPVE6jJfJk6yp0Ig/" />
   </PortalFolders>
 </SexyContent>
