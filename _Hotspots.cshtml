@@ -12,7 +12,7 @@
 
 @* The visible parts - image and dots to click on *@
 <div class="app-hotspot3" @Edit.TagToolbar(hotspots)>
-  <div class="hotspots" @Html.Raw(helpers.EditAttr(moduleId, hotspots, sharedSettings)) >
+  <div class="hotspots" @helpers.EditAttr(moduleId, hotspots, sharedSettings) >
     @* The hotspot dots/icons to click on *@
     @foreach (var marker in sharedSettings.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
