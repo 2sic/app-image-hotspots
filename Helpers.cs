@@ -1,5 +1,4 @@
 using ToSic.Razor.Blade;
-using System.Globalization;
 
 public class Helpers: Custom.Hybrid.Code12
 {
@@ -17,8 +16,8 @@ public class Helpers: Custom.Hybrid.Code12
 
   // This position the marker on the image and sets the size as needed
   public dynamic MarkerStyles(dynamic hotspot, dynamic settings) {
-    return "top: " + hotspot.Y.ToString(CultureInfo.InvariantCulture) + "%;" 
-      + " left: " + hotspot.X.ToString(CultureInfo.InvariantCulture) + "%;" 
+    return "top: " + Convert.ForCode(hotspot.Y) + "%;" 
+      + " left: " + Convert.ForCode(hotspot.X) + "%;" 
       + " width: " + settings.HotspotMarker.HotspotWidth + ";"
       + " height: " + settings.HotspotMarker.HotspotHeight;
   }
