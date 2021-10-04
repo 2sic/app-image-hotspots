@@ -17,7 +17,7 @@
     <div class="@layoutClass">
       @if(Text.Has(hotspot.Image)) {
         <div>
-          <img src='@Link.Image(hotspot.Image, Settings.Images.Lightbox, width: imageWidth, height: imageHeight, resizeMode: "max")' alt="@hotspot.Title">
+          <img loading="lazy" src='@Link.Image(hotspot.Image, Settings.Images.Lightbox, width: imageWidth, height: imageHeight, resizeMode: "max")' alt="@hotspot.Title">
         </div>
       }
 
