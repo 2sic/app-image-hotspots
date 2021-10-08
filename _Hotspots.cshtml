@@ -8,6 +8,9 @@
   var hotspots = Content; // give it a nicer name so the code is easier to read
   var sharedSettings = AsDynamic(hotspots, Settings);
   var moduleId = CmsContext.Module.Id;
+
+  // define dom attribute for fancybox
+  var fancyboxAttribute = "app-gallery7-fancybox-" + CmsContext.Module.Id; 
 }
 
 @* The visible parts - image and dots to click on *@
@@ -18,7 +21,7 @@
       // Merge settings of marker, hotspot-set and defaults to always take the best option
       var markerSettings = AsDynamic(marker, hotspots, Settings);
 
-      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" data-app-hotspot3-fancybox='@moduleId' data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
+      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
         <img loading="lazy" src="@Link.Image(markerSettings.HotspotMarker.HotspotIcon)" alt="@marker.Title" class="heartbeat">
       </div>
     }
@@ -29,4 +32,4 @@
 </div>
 
 @Html.Partial("_Hotspots.PartLayers.cshtml", new { HotspotsSettings = sharedSettings })
-@Html.Partial("_Hotspots.PartAssets.cshtml")
+@Html.Partial("_Hotspots.PartAssets.cshtml", new { FancyboxAttribute = fancyboxAttribute })

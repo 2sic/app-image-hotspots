@@ -7,7 +7,17 @@
   if(Edit.Enabled) {
     <turnOn turn-on='{ "run": "window.appHotspot3.activateAdmin()" }'></turnOn>
   }
+
+  // Init options for fancybox binding
+  // This is only partial - if you want to see more, see https://fancyapps.com/docs/ui/fancybox/options
+  var fancyboxOptions = new {
+    groupAll = true,
+    mainClass = "app-appHotspot3-fancybox", 
+    Thumbs = new {
+      autoStart = false
+    }
+  };
 }
-<turnOn turn-on='{ "await": ["window.Fancybox"], "run": "window.appHotspot3.activateFancybox()", "data": { "groupId": "@CmsContext.Module.Id" } }'></turnOn>
+<turnOn turn-on='{"await": ["window.Fancybox"], "run": "window.appHotspot3.initFancybox()", "data": { "attribute": "@DynamicModel.FancyboxAttribute", "options": @Html.Raw(Convert.Json.ToJson(fancyboxOptions)) }}'></turnOn>
 <link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
 <script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
