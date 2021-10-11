@@ -15,8 +15,8 @@ A awesome image hotspots app to use with 2sxc
 | Live Demo           | ➖    | 
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/ccfIKnqk) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
-| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/image-hotspots)
-| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/image-hotspots)
+| App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/image-hotspots-v3-hybrid-for-dnn-and-oqtane)
+| Screenshots         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/image-hotspots-v3-hybrid-for-dnn-and-oqtane)
 | Best Practices      | ✅    | Uses v12.05 conventions
 | Bootstrap 4         | ✅    | v4 optimized
 | Bootstrap 5         | ✔️    | Tested & works but not optimized
