@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="12.05.00" ExportDate="2021-10-11T17:11:00.0167509+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.00.01" ExportDate="2022-01-05T09:04:09.9125145+01:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -9,10 +9,10 @@
     </Dimensions>
   </Header>
   <AttributeSets>
-    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Resources" Name="App-Resources" Description="Stores resources like translations for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes />
     </AttributeSet>
-    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="2SexyContent-App" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="App-Settings" Name="App-Settings" Description="Stores settings for an app" Scope="System.App" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="OverlayImageMaxWidth" Type="Number" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="b601416b-4f68-4a63-b93e-135094f1f736" Json="True" KeyNumber="4858">
@@ -169,7 +169,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" Name="Hotspot" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" Name="Hotspot" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="6b3fd312-d8bb-46d1-9355-5e5bddd7ea3f" Json="True" KeyNumber="3755">
@@ -586,7 +586,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" Name="HotspotMarkers" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="7b958e1a-081f-40ca-97f5-19d334b6750f" Name="HotspotMarkers" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="aecaf22a-48ae-4598-a4eb-0471031c46bd" Json="True" KeyNumber="4108">
@@ -853,7 +853,7 @@
         </Attribute>
       </Attributes>
     </AttributeSet>
-    <AttributeSet StaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" Name="ImageWithHotspots" Description="" Scope="2SexyContent" AlwaysShareConfiguration="false">
+    <AttributeSet StaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" Name="ImageWithHotspots" Description="" Scope="Default" AlwaysShareConfiguration="false">
       <Attributes>
         <Attribute StaticName="Title" Type="String" IsTitle="true">
           <Entity AssignmentObjectType="EAV Field Properties" AttributeSetStaticName="@All" AttributeSetName="@All" EntityGUID="7d2b67c3-cf9a-4451-9d1b-3a9b8b98e309" Json="True" KeyNumber="3752">
@@ -1102,7 +1102,7 @@
       <Value Key="SupportsAjaxReload" Value="False" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.00.00" Type="String">
+      <Value Key="Version" Value="03.00.01" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1673,6 +1673,7 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity AssignmentObjectType="Entity" AttributeSetStaticName="529ba3a2-d7d4-4f40-a81b-ff819de03a9e" AttributeSetName="IsDefaultDecorator" EntityGUID="34769bc6-91b7-420d-8422-a84a8fe07ba8" Json="True" KeyGuid="b0d757e1-066c-40d0-b1ee-423f1a3c349c" />
   </Entities>
   <PortalFiles>
     <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
