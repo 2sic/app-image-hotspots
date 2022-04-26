@@ -1,5 +1,6 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Razor.Blade;
+@using ToSic.Sxc.Services;
 @{
   // Get some helper commands for later on
   var helpers = CreateInstance("Helpers.cs");
@@ -11,6 +12,8 @@
 
   // define dom attribute for fancybox
   var fancyboxAttribute = "app-gallery7-fancybox-" + CmsContext.Module.Id; 
+
+  var imgSvc = GetService<IImageService>();
 }
 
 @* The visible parts - image and dots to click on *@
@@ -22,12 +25,16 @@
       var markerSettings = AsDynamic(marker, hotspots, Settings);
 
       <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
-        <img loading="lazy" src="@Link.Image(markerSettings.HotspotMarker.HotspotIcon)" alt="@marker.Title" class="heartbeat">
+        @imgSvc.Picture(markerSettings.HotspotMarker.HotspotIcon, settings: imgSvc.Settings("Hotspots"), imgAlt: marker.Title, imgClass: "heartbeat")
       </div>
     }
 
     @* The main image, on which the the hotspots are placed - will adhere to "Content" image conventions *@
-    <img loading="lazy" src="@Link.Image(hotspots.Image, sharedSettings.Images.Content)" class='hotspot3-image @(hotspots.IsDemoItem ? "" : "hotspot3-js-image")'>
+    @{
+      var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image";
+      var hotspotImgClass = pictureClass + "hotspot3-image";
+    }
+    @imgSvc.Picture(hotspots.Image, settings:sharedSettings.Images.Content, imgClass:hotspotImgClass)
   </div>
 </div>
 

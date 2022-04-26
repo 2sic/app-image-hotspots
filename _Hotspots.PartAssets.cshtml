@@ -1,6 +1,7 @@
 @inherits Custom.Hybrid.Razor12
+@using ToSic.Sxc.Services;
 @{
-  var page = GetService<ToSic.Sxc.Web.IPageService>();  // Service to set titles etc. on the page
+  var page = GetService<IPageService>();  // Service to set titles etc. on the page
   page.Activate("turnOn", "fancybox4"); // see https://r.2sxc.org/turnon - fancybox4 is a standard WebResources in 2sxc
   
   // Activate special JS which the admin needs to manage the hotspots

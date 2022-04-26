@@ -29,8 +29,11 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* 2021-09 v3
+* 2021-09 v03.00.00
   * Update to 2sxc 12.05 standard
   * Hybrid for Dnn & Oqtane
   * dropped jQuery
   * cleaner code
+* 2022-04 v03.01.00
+  * Changed all access to services to ToSic.Sxc.Services
+  * Changed all images to use IImageService
