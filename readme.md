@@ -37,3 +37,4 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * 2022-04 v03.01.00
   * Changed all access to services to ToSic.Sxc.Services
   * Changed all images to use IImageService
+  * Activated image configuration
