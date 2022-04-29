@@ -25,7 +25,7 @@
       var markerSettings = AsDynamic(marker, hotspots, Settings);
 
       <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
-        @imgSvc.Picture(markerSettings.HotspotMarker.HotspotIcon, settings: imgSvc.Settings("Hotspots"), imgAlt: marker.Title, imgClass: "heartbeat")
+        @imgSvc.Picture(markerSettings.HotspotMarker.HotspotIcon, settings: Settings.Images.Hotspots, imgAlt: marker.Title, imgClass: "heartbeat")
       </div>
     }
 
