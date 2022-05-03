@@ -13,6 +13,7 @@
   // define dom attribute for fancybox
   var fancyboxAttribute = "app-gallery7-fancybox-" + CmsContext.Module.Id; 
 
+  // Image Service used to generate optimal images
   var imgSvc = GetService<IImageService>();
 }
 
@@ -23,9 +24,10 @@
     @foreach (var marker in sharedSettings.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
       var markerSettings = AsDynamic(marker, hotspots, Settings);
+      var altText = Text.First(markerSettings.HotspotMarker.Field("HotspotIcon").Metadata.Description, marker.Title);
 
       <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
-        @imgSvc.Picture(markerSettings.HotspotMarker.HotspotIcon, settings: Settings.Images.Hotspots, imgAlt: marker.Title, imgClass: "heartbeat")
+        @imgSvc.Picture(markerSettings.HotspotMarker.Field("HotspotIcon"), settings: Settings.Images.Hotspots, imgAlt: altText, imgClass: "heartbeat")
       </div>
     }
 
@@ -34,7 +36,7 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @imgSvc.Picture(hotspots.Image, settings:sharedSettings.Images.Content, imgClass:hotspotImgClass)
+    @imgSvc.Picture(hotspots.Field("Image"), settings: sharedSettings.Images.Content, imgClass: hotspotImgClass)
   </div>
 </div>
 

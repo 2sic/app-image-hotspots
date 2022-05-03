@@ -2,8 +2,9 @@
 @using ToSic.Razor.Blade;
 @using ToSic.Sxc.Services;
 @{
-    var hotspotsSettings = DynamicModel.HotspotsSettings;
+  var hotspotsSettings = DynamicModel.HotspotsSettings;
 
+  // Image Service used to generate optimal images
   var imgSvc = GetService<IImageService>();
 }
 @* This creates the hidden layers which will appear when hotspots are clicked *@
@@ -21,7 +22,8 @@
       @if(Text.Has(hotspot.Image)) {
         <div>
           @{
-            var pic = imgSvc.Picture(hotspot.Image, settings:Settings.Images.Lightbox, width:imageWidth, imgAlt:hotspot.Title);
+            var altText = Text.First(hotspot.Field("Image").Metadata.Description, hotspot.Title);
+            var pic = imgSvc.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAlt: altText);
             pic.Img.Height(imageHeight.ToString());
           }
           @pic
