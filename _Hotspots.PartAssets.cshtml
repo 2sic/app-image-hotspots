@@ -20,5 +20,5 @@
   };
 }
 <turnOn turn-on='{"await": ["window.Fancybox"], "run": "window.appHotspot3.initFancybox()", "data": { "attribute": "@DynamicModel.FancyboxAttribute", "options": @Html.Raw(Convert.Json.ToJson(fancyboxOptions)) }}'></turnOn>
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" data-enableoptimizations="true">
-<script type="text/javascript" src="@App.Path/dist/scripts.min.js" data-enableoptimizations="bottom"></script>
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" @(page.AssetAttributes())>
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @(page.AssetAttributes(position:"bottom" ))></script>
