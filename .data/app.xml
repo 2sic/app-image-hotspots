@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.11.00" ExportDate="2022-05-10T15:12:08.84829+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="13.11.00" ExportDate="2022-05-10T15:21:07.1246377+02:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -1791,7 +1791,10 @@
       <Value Key="DurationUsers" Value="-1" Type="Number">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Title" Value="🚫" Type="String">
+      <Value Key="IsEnabled" Value="True" Type="Boolean">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="✅ - Users 14400s, Reg 🚫, Editors 300s, SysAdmins 300s" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="UrlParametersCaseSensitive" Value="False" Type="Boolean">
