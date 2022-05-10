@@ -1,8 +1,8 @@
 @inherits Custom.Hybrid.Razor12
 @using ToSic.Sxc.Services;
 @{
-  var page = GetService<IPageService>();  // Service to set titles etc. on the page
-  page.Activate("turnOn", "fancybox4"); // see https://r.2sxc.org/turnon - fancybox4 is a standard WebResources in 2sxc
+  var pageSvc = GetService<IPageService>();  // Service to set titles etc. on the page
+  pageSvc.Activate("turnOn", "fancybox4"); // see https://r.2sxc.org/turnon - fancybox4 is a standard WebResources in 2sxc
   
   // Activate special JS which the admin needs to manage the hotspots
   if(Edit.Enabled) {
@@ -20,5 +20,5 @@
   };
 }
 <turnOn turn-on='{"await": ["window.Fancybox"], "run": "window.appHotspot3.initFancybox()", "data": { "attribute": "@DynamicModel.FancyboxAttribute", "options": @Html.Raw(Convert.Json.ToJson(fancyboxOptions)) }}'></turnOn>
-<link rel="stylesheet" href="@App.Path/dist/styles.min.css" @(page.AssetAttributes())>
-<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @(page.AssetAttributes(position:"bottom" ))></script>
+<link rel="stylesheet" href="@App.Path/dist/styles.min.css" @pageSvc.AssetAttributes()>
+<script type="text/javascript" src="@App.Path/dist/scripts.min.js" @pageSvc.AssetAttributes(position:"bottom" )></script>
