@@ -10,25 +10,21 @@
   "license": "ISC",
   "devDependencies": {
     "@types/fancybox": "^3.5.3",
-    "@types/node": "^16.9.2",
-    "autoprefixer": "^10.3.4",
-    "css-loader": "^6.2.0",
-    "file-loader": "^6.2.0",
-    "friendly-errors-webpack-plugin": "^1.7.0",
-    "mini-css-extract-plugin": "^2.3.0",
-    "optimize-css-assets-webpack-plugin": "^6.0.1",
-    "postcss-loader": "^6.1.1",
-    "sass": "^1.41.1",
-    "sass-loader": "^12.1.0",
-    "style-loader": "^3.2.1",
-    "terser-webpack-plugin": "^5.2.4",
-    "ts-loader": "^9.2.5",
-    "typescript": "^4.4.3",
-    "webpack": "^5.53.0",
-    "webpack-cli": "^4.8.0",
-    "webpackbar": "^4.0.0"
+    "@types/node": "^18.0.0",
+    "autoprefixer": "^10.4.7",
+    "css-loader": "^6.7.1",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.0",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "@2sic.com/2sxc-typings": "^14.7.0",
+    "bootstrap": "^5.1.3"
   }
 }

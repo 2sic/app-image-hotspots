@@ -1,11 +1,9 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 @{
   var hotspotsSettings = DynamicModel.HotspotsSettings;
 
-  // Image Service used to generate optimal images
-  var imgSvc = GetService<IImageService>();
+  var hotspotToolbar = Kit.Toolbar.Default().Delete();
 }
 @* This creates the hidden layers which will appear when hotspots are clicked *@
 @foreach (var hotspot in hotspotsSettings.Hotspots) {
@@ -16,14 +14,14 @@
   var imageWidth = (int)hotspotsSettings.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75);
   var imageHeight = (int)hotspotsSettings.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 );
 
-  var toolbar = Content.IsDemoItem ? "" : Edit.TagToolbar(hotspot, toolbar: new[] { "%delete&show=true" });
+  var toolbar = Content.IsDemoItem ? "" : hotspotToolbar.For(hotspot);
   <div id="hotspot3-content-@hotspot.EntityId-@CmsContext.Module.Id" class="hotspot3-fancybox-content" style="display: none" @toolbar>
     <div class="@layoutClass">
       @if(Text.Has(hotspot.Image)) {
         <div>
           @{
             var altText = Text.First(hotspot.Field("Image").Metadata.Description, hotspot.Title);
-            var pic = imgSvc.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAlt: altText);
+            var pic = Kit.Image.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAlt: altText);
             pic.Img.Height(imageHeight.ToString());
           }
           @pic

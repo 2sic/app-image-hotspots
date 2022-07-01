@@ -38,3 +38,8 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Changed all access to services to ToSic.Sxc.Services
   * Changed all images to use IImageService
   * Activated image configuration
+* 2022-06 v03.02.00 
+  * Changed all base classes to their 2sxc 14 equivalents
+  * Replaced all GetService<> with the new ServiceKit14
+  * Updated webpack
+  * Changed all toolbar configurations to use the IToolbarService

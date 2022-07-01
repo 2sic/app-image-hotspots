@@ -1,9 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const WebpackBar = require('webpackbar');
 
 module.exports = {
   entry: ['./src/ts/index.ts'],
@@ -18,36 +14,18 @@ module.exports = {
     all: false,
     assets: true
   },
+  cache: {
+    type: 'filesystem',
+    cacheDirectory: path.resolve(__dirname, '.temp_cache'),
+    compression: 'gzip',
+  },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.scss', '.css']
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          output: {
-            comments: false,
-          },
-        },
-        extractComments: false,
-      }),
-      new OptimizeCSSAssetsPlugin({
-        cssProcessorOptions: {
-          map: {
-            inline: false,
-            annotation: true,
-          }
-        }
-      })
-    ],
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles.min.css',
     }),
-    new WebpackBar(),
-    new FriendlyErrorsWebpackPlugin()
   ],
   module: {
     rules: [{
@@ -88,7 +66,6 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/,
         use: [{
-          loader: 'file-loader',
           options: {
             name: '[name].[ext]',
             outputPath: 'images/'

@@ -1,6 +1,5 @@
-@inherits Custom.Hybrid.Razor12
+@inherits Custom.Hybrid.Razor14
 @using ToSic.Razor.Blade;
-@using ToSic.Sxc.Services;
 @{
   // Get some helper commands for later on
   var helpers = CreateInstance("Helpers.cs");
@@ -12,9 +11,6 @@
 
   // define dom attribute for fancybox
   var fancyboxAttribute = "app-gallery7-fancybox-" + CmsContext.Module.Id; 
-
-  // Image Service used to generate optimal images
-  var imgSvc = GetService<IImageService>();
 }
 
 @* The visible parts - image and dots to click on *@
@@ -36,7 +32,7 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @imgSvc.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass)
+    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass)
   </div>
 </div>
 
