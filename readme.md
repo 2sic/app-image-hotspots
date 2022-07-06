@@ -43,3 +43,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Replaced all GetService<> with the new ServiceKit14
   * Updated webpack
   * Changed all toolbar configurations to use the IToolbarService
+* 2022-07 v03.02.01 
+  * Changed the typescript typings to the new Typescript API
