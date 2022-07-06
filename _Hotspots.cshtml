@@ -30,7 +30,7 @@
     @* The main image, on which the the hotspots are placed - will adhere to "Content" image conventions *@
     @{
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image";
-      var hotspotImgClass = pictureClass + "hotspot3-image";
+      var hotspotImgClass = pictureClass + " hotspot3-image";
     }
     @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass)
   </div>

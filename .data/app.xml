@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="14.07.00" ExportDate="2022-06-30T08:45:54.9171165+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="14.07.01" ExportDate="2022-07-01T16:06:44.6774611+02:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -1525,6 +1525,8 @@
       <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="05616fa1-3bc5-497a-a298-acade440de11" Json="True">
+      <Value Key="Content" Value="0d08eef6-39b1-425c-9381-3becdda2042f" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
       <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
     </Entity>
     <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="a0d7f7c8-3de0-4566-b08d-520341836ccb" Json="True">
@@ -1812,6 +1814,73 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="faf8639e-aa48-4e77-9087-0aac5918df32">
+      <Value Key="Description" Value="" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="HotspotMarker" Value="b2b7f232-2afb-470b-a5f8-afc4dd8fede8" Type="Entity" />
+      <Value Key="Image" Value="" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Test" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="20" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="20" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" AttributeSetName="ImageWithHotspots" EntityGUID="0d08eef6-39b1-425c-9381-3becdda2042f">
+      <Value Key="Image" Value="" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="84689a96-8b29-4189-8ab2-25b900849668" Json="True">
+      <Value Key="Content" Value="d64885a9-2f19-4fa9-8a00-eef4bc4fbc07" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="e6e0d6ae-df07-4a1b-abbd-716203412f7c" AttributeSetName="Hotspot" EntityGUID="ab81eeed-03ce-46b2-9133-2fb979a5fbfa">
+      <Value Key="Description" Value="&lt;p&gt;Hello world&lt;/p&gt;" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="HotspotMarker" Value="565c3ec3-9e72-4a2e-a798-a302f12f2af0" Type="Entity" />
+      <Value Key="Image" Value="file:6174" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="OverlayLayout" Value="img-text" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="TEst marker" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="X" Value="20" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Y" Value="20" Type="Number">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="e4d84b0f-ea4f-4f52-a60c-bf049fcd1a73" AttributeSetName="ImageWithHotspots" EntityGUID="d64885a9-2f19-4fa9-8a00-eef4bc4fbc07">
+      <Value Key="Hotspots" Value="ab81eeed-03ce-46b2-9133-2fb979a5fbfa" Type="Entity" />
+      <Value Key="Image" Value="file:6173" Type="Hyperlink">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+      <Value Key="Title" Value="Test" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
+    </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="5ab7fe4f-b1d3-4fc3-972b-63c9c7a133d3" Json="True">
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
@@ -1830,6 +1899,8 @@
     <File Id="6026" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img-2.png" />
     <File Id="6030" RelativePath="adam\ImageHotspots3\Uu4K86bPVE6jJfJk6yp0Ig\Image\createtravel-tv-qS9W_cuRKfI-unsplash.jpg" />
     <File Id="6031" RelativePath="adam\ImageHotspots3\JHUYPfLqUUmL0_-Kx9Tu2w\Image\the-blowup-oW5pE7oK73I-unsplash.jpg" />
+    <File Id="6174" RelativePath="adam\ImageHotspots3\7e6Bq84DskaRMy-5eaX7-g\Image\tree-736885__480.jpg" />
+    <File Id="6173" RelativePath="adam\ImageHotspots3\qYVI1hkvqU-KAO70vE-8Bw\Image\visual-reverse-image-search-v2_intro.jpg" />
     <File Id="6016" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img.png" />
     <File Id="6012" RelativePath="adam\ImageHotspots3\eR610vO6WUildXa0O8uZHA\Image\Platzhalterbild_Inhalt-1.jpg" />
     <File Id="6015" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img.png" />
@@ -1853,13 +1924,17 @@
     <Folder Id="13425" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/Image/" />
     <Folder Id="13430" RelativePath="adam/ImageHotspots3/Uu4K86bPVE6jJfJk6yp0Ig/Image/" />
     <Folder Id="13432" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/Image/" />
+    <Folder Id="13791" RelativePath="adam/ImageHotspots3/7e6Bq84DskaRMy-5eaX7-g/Image/" />
+    <Folder Id="13789" RelativePath="adam/ImageHotspots3/qYVI1hkvqU-KAO70vE-8Bw/Image/" />
     <Folder Id="13417" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/Image/" />
     <Folder Id="13410" RelativePath="adam/ImageHotspots3/" />
     <Folder Id="13424" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/" />
+    <Folder Id="13790" RelativePath="adam/ImageHotspots3/7e6Bq84DskaRMy-5eaX7-g/" />
     <Folder Id="13416" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/" />
     <Folder Id="13431" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/" />
     <Folder Id="13422" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/" />
     <Folder Id="13420" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/" />
+    <Folder Id="13788" RelativePath="adam/ImageHotspots3/qYVI1hkvqU-KAO70vE-8Bw/" />
     <Folder Id="13418" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/" />
     <Folder Id="13429" RelativePath="adam/ImageHotspots3/Uu4K86bPVE6jJfJk6yp0Ig/" />
   </PortalFolders>

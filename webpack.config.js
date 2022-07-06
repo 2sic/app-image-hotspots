@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -11,8 +12,9 @@ module.exports = {
   devtool: 'source-map',
   watch: true,
   stats: {
-    all: false,
-    assets: true
+    warnings: false,
+    cachedModules: false,
+    groupModulesByCacheStatus: false
   },
   cache: {
     type: 'filesystem',
@@ -20,12 +22,13 @@ module.exports = {
     compression: 'gzip',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.scss', '.css']
+    extensions: ['.d.ts', '.ts', '.tsx', '.js', '.scss', '.css']
   },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'styles.min.css',
     }),
+    new webpack.ProgressPlugin(),
   ],
   module: {
     rules: [{
@@ -55,23 +58,20 @@ module.exports = {
             }
           }
         ],
-      },
-      {
+      }, {
         test: /\.ts$/,
-        exclude: /node_modules/,
+        exclude: /node_modules|\.d\.ts$/,
         use: {
           loader: 'ts-loader'
         }
-      },
-      {
-        test: /\.(png|jpe?g|gif)$/,
-        use: [{
-          options: {
-            name: '[name].[ext]',
-            outputPath: 'images/'
-          }
-        }]
+      }, {
+        test: /\.d\.ts$/,
+        loader: 'ignore-loader'
       }
     ],
   },
 };
+
+new webpack.ProgressPlugin((percentage, message) => {
+  console.log(`${(percentage * 100).toFixed()}% ${message}`);
+})

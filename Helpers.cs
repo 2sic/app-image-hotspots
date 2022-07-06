@@ -18,11 +18,11 @@ public class Helpers: Custom.Hybrid.Code14
 
   // This position the marker on the image and sets the size as needed
   public dynamic MarkerStyles(dynamic hotspot, dynamic settings) {
-    return 
+    return Tag.RawHtml(
       "top: " + Kit.Convert.ForCode(hotspot.Y) + "%;" 
       + " left: " + Kit.Convert.ForCode(hotspot.X) + "%;" 
       + " width: " + settings.HotspotMarker.HotspotWidth + ";"
       + " height: " + settings.HotspotMarker.HotspotHeight
-    ;
+    );
   }
 }
