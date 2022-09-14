@@ -20,7 +20,6 @@
     @foreach (var marker in sharedSettings.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
       var markerSettings = AsDynamic(marker, hotspots, Settings);
-      var altText = Text.First(markerSettings.HotspotMarker.Field("HotspotIcon").Metadata.Description, marker.Title);
 
       <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.EntityId-@moduleId'>
         <img loading="lazy" src="@Link.Image(markerSettings.HotspotMarker.HotspotIcon)" alt="@marker.Title" class="heartbeat">
@@ -32,7 +31,7 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image ";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass)
+    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass, imgAlt: "")
   </div>
 </div>
 
