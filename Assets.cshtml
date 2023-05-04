@@ -1,0 +1,35 @@
+@inherits Custom.Hybrid.Razor14
+@{
+
+  // 2. Include the framework if it isn't known
+  @Kit.Page.Activate(condition: Kit.Css.IsUnknown, features: "Bootstrap5")
+
+  // Activate special JS which the admin needs to manage the hotspots
+  if (Edit.Enabled) {
+    @Kit.Page.TurnOn("window.appHotspot3.activateAdmin()")
+
+  }
+
+  // Init options for fancybox binding
+  // This is only partial - if you want to see more, see https://fancyapps.com/docs/ui/fancybox/options
+  var fancyboxOptions = new {
+    groupAll = true,
+    mainClass = "app-appHotspot3-fancybox", 
+    Thumbs = new {
+      autoStart = false
+    }
+  };
+
+  var data = new {
+      attribute = DynamicModel.FancyboxAttribute,
+      options = fancyboxOptions
+    };
+
+}
+
+<link rel="stylesheet" href="@CmsContext.View.Path/dist/styles.min.css" @Kit.Page.AssetAttributes()>
+<script type="text/javascript" src="@CmsContext.View.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
+
+@* Activation uses turnOn https://r.2sxc.org/turnon *@
+@Kit.Page.Activate("fancybox4")
+@Kit.Page.TurnOn("window.appHotspot3.initFancybox()", data: data)

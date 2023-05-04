@@ -14,7 +14,7 @@
 }
 
 @* The visible parts - image and dots to click on *@
-<div class="app-hotspot3" @Edit.TagToolbar(hotspots)>
+<div class="app-hotspot3" @Kit.Toolbar.Default(hotspots)>
   <div class="hotspots" @helpers.EditAttr(moduleId, hotspots, sharedSettings)>
     @* The hotspot dots/icons to click on *@
     @foreach (var marker in sharedSettings.Hotspots) {
@@ -31,9 +31,9 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image ";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass, imgAlt: "")
+    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass, imgAltFallback : Content.Title)
   </div>
 </div>
 
-@Html.Partial("_Hotspots.PartLayers.cshtml", new { HotspotsSettings = sharedSettings })
-@Html.Partial("_Hotspots.PartAssets.cshtml", new { FancyboxAttribute = fancyboxAttribute })
+@Html.Partial("Hotspots.PartLayers.cshtml", new { HotspotsSettings = sharedSettings })
+@Html.Partial("Assets.cshtml", new { FancyboxAttribute = fancyboxAttribute })

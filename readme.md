@@ -8,7 +8,7 @@ A awesome image hotspots app to use with 2sxc
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | Hotspot v3 requires 2sxc v13.10
+| 2sxc                | ✅    | requires 2sxc v16
 | Dnn                 | ✅    | For v7, v8 and v9
 | Oqtane 2            | ✅    | Requires v2.02
 | No jQuery           | ✅    | Since v3
@@ -29,19 +29,23 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 
 ## History
 
-* 2021-09 v03.00.00
+* v.03.00.00 2021-09
   * Update to 2sxc 12.05 standard
   * Hybrid for Dnn & Oqtane
   * dropped jQuery
   * cleaner code
-* 2022-04 v03.01.00
+* v.03.01.00 2022-04 
   * Changed all access to services to ToSic.Sxc.Services
   * Changed all images to use IImageService
   * Activated image configuration
-* 2022-06 v03.02.00 
+* v.03.02.00 2022-06 
   * Changed all base classes to their 2sxc 14 equivalents
   * Replaced all GetService<> with the new ServiceKit14
   * Updated webpack
   * Changed all toolbar configurations to use the IToolbarService
-* 2022-07 v03.02.01 
+* v.03.02.01 2022-07 
   * Changed the typescript typings to the new Typescript API
+* v.03.03.00 2023-05
+  * Removed _ from Filenames 
+  * Enhanced Kit.Image with `imgAltFallback`
+  * Replaced turnOn Tag with `Kit.Page.TurnOn`

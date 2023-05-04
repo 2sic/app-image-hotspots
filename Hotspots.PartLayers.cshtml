@@ -20,8 +20,7 @@
       @if(Text.Has(hotspot.Image)) {
         <div>
           @{
-            var altText = Text.First(hotspot.Field("Image").Metadata.Description, hotspot.Title);
-            var pic = Kit.Image.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAlt: altText);
+            var pic = Kit.Image.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAltFallback: hotspot.Title);
             pic.Img.Height(imageHeight.ToString());
           }
           @pic
