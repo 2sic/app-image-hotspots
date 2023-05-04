@@ -4,7 +4,7 @@ public class Helpers: Custom.Hybrid.Code14
 {
   // returns required attributes for editing mode if needed
   public dynamic EditAttr(int moduleId, dynamic data, dynamic settings) {
-    if(!Edit.Enabled) return null;
+    if (!Edit.Enabled) return null;
 
     // Must wrap in Tag.Custom so the HTML-Encoding will be correct
     return Tag.RawHtml(

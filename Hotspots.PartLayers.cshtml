@@ -17,7 +17,7 @@
   var toolbar = Content.IsDemoItem ? "" : hotspotToolbar.For(hotspot);
   <div id="hotspot3-content-@hotspot.EntityId-@CmsContext.Module.Id" class="hotspot3-fancybox-content" style="display: none" @toolbar>
     <div class="@layoutClass">
-      @if(Text.Has(hotspot.Image)) {
+      @if (Text.Has(hotspot.Image)) {
         <div>
           @{
             var pic = Kit.Image.Picture(hotspot.Field("Image"), settings: Settings.Images.Lightbox, width: imageWidth, imgAltFallback: hotspot.Title);
@@ -27,7 +27,7 @@
         </div>
       }
 
-      @if(Text.Has(hotspot.Description)) {
+      @if (Text.Has(hotspot.Description)) {
         <div class="hotspot3-fancybox-text">
           @Html.Raw(hotspot.Description)
         </div>
