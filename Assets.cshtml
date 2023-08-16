@@ -1,35 +1,28 @@
-@inherits Custom.Hybrid.Razor14
+@inherits Custom.Hybrid.RazorTyped
+
+@* Include Bootstrap5 if CSS Framework isn't known *@
+@Kit.Page.Activate(condition: Kit.Css.IsUnknown, features: "Bootstrap5")
+
 @{
-
-  // 2. Include the framework if it isn't known
-  @Kit.Page.Activate(condition: Kit.Css.IsUnknown, features: "Bootstrap5")
-
-  // Activate special JS which the admin needs to manage the hotspots
-  if (Edit.Enabled) {
-    @Kit.Page.TurnOn("window.appHotspot3.activateAdmin()")
-
-  }
-
-  // Init options for fancybox binding
-  // This is only partial - if you want to see more, see https://fancyapps.com/docs/ui/fancybox/options
-  var fancyboxOptions = new {
-    groupAll = true,
-    mainClass = "app-appHotspot3-fancybox", 
-    Thumbs = new {
-      autoStart = false
+  var data = new {
+    attribute = MyModel.String("FancyboxAttribute"),
+    // Init options for fancybox binding - there could be more, see https://fancyapps.com/docs/ui/fancybox/options
+    options = new {
+      groupAll = true,
+      mainClass = "app-appHotspot3-fancybox", 
+      Thumbs = new {
+        autoStart = false
+      }
     }
   };
-
-  var data = new {
-      attribute = DynamicModel.FancyboxAttribute,
-      options = fancyboxOptions
-    };
-
 }
 
-<link rel="stylesheet" href="@CmsContext.View.Path/dist/styles.min.css" @Kit.Page.AssetAttributes()>
-<script type="text/javascript" src="@CmsContext.View.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>
-
-@* Activation uses turnOn https://r.2sxc.org/turnon *@
+@* Activate fancybox and turnOn when everything is loaded *@
 @Kit.Page.Activate("fancybox4")
 @Kit.Page.TurnOn("window.appHotspot3.initFancybox()", data: data)
+
+@* Activate special JS which the admin needs to manage the hotspots *@
+@Kit.Page.TurnOn("window.appHotspot3.activateAdmin()", condition: MyUser.IsContentAdmin)
+
+<link rel="stylesheet" href="@MyView.Path/dist/styles.min.css" @Kit.Page.AssetAttributes()>
+<script type="text/javascript" src="@MyView.Path/dist/scripts.min.js" @Kit.Page.AssetAttributes(position:"bottom" )></script>

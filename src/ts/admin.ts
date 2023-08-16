@@ -18,6 +18,7 @@ export function activateAdmin() {
         const e = (event as MouseEvent);
         // Find the tag with class 'hotspots' because it contains more positioning data
         const tagWithData = hsElem.closest(".hotspots") as HTMLElement;
+
         const moduleId = parseInt(tagWithData.dataset.moduleId);
         const entityId = parseInt(tagWithData.dataset.entityId);
         const guid = tagWithData.dataset.guid;

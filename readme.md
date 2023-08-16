@@ -1,6 +1,6 @@
 <image src="app-icon.png" align="right" width="200px">
 
-# Image Hotspots 3 App for .net CMSs
+# Image HotSpots 3 App for .net CMSs
 
 > This is a [2sxc](https://2sxc.org) App for [DNN ☢️](https://www.dnnsoftware.com/) and [Oqtane 💧](https://www.oqtane.org/)
 
@@ -8,11 +8,11 @@ A awesome image hotspots app to use with 2sxc
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16
-| Dnn                 | ✅    | For v7, v8 and v9
-| Oqtane 2            | ✅    | Requires v2.02
+| 2sxc                | ✅    | requires 2sxc v16.02
+| Dnn                 | ✅    | For v9.6.1+
+| Oqtane 2            | ✅    | Requires v3.04+
 | No jQuery           | ✅    | Since v3
-| Live Demo           | ➖    | 
+| Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/ccfIKnqk) on [azing.org](https://azing.org/2sxc)
 | Source & License    | ✅    | included, ISC/MIT
 | App Catalog         | ✅    | See [app catalog](https://2sxc.org/en/apps/app/image-hotspots-v3-hybrid-for-dnn-and-oqtane)
@@ -23,7 +23,7 @@ A awesome image hotspots app to use with 2sxc
 
 ## Customize the App
 
-You can configure a lot, and since it's open-source you can also change anything you want. 
+You can configure a lot, and since it's open-source you can also change anything you want.
 
 If you want to customize the CSS, you will usually follow the ["Create Custom Styles in a Standard 2sxc App" checklist](https://azing.org/2sxc/r/gg_aB9FD)
 
@@ -34,18 +34,21 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Hybrid for Dnn & Oqtane
   * dropped jQuery
   * cleaner code
-* v.03.01.00 2022-04 
+* v.03.01.00 2022-04
   * Changed all access to services to ToSic.Sxc.Services
   * Changed all images to use IImageService
   * Activated image configuration
-* v.03.02.00 2022-06 
+* v.03.02.00 2022-06
   * Changed all base classes to their 2sxc 14 equivalents
   * Replaced all GetService<> with the new ServiceKit14
   * Updated webpack
   * Changed all toolbar configurations to use the IToolbarService
-* v.03.02.01 2022-07 
+* v.03.02.01 2022-07
   * Changed the typescript typings to the new Typescript API
 * v.03.03.00 2023-05
-  * Removed _ from Filenames 
+  * Removed _ from Filenames
   * Enhanced Kit.Image with `imgAltFallback`
   * Replaced turnOn Tag with `Kit.Page.TurnOn`
+* v03.04.00 2023-07
+  * 2sxc 16.02 coding conventions
+  * everything typed

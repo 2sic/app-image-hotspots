@@ -11,7 +11,7 @@ import { FancyboxOptions } from './lib-2sxc-fancybox-options';
 */ 
 
 export function initFancybox({ attribute, options } : { attribute: string, options: FancyboxOptions }) {
-  console.log(attribute);
-  console.log(options);
+  // console.log(attribute);
+  // console.log(options);
   Fancybox.bind(`[${attribute}]`, options);
 }

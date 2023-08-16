@@ -1,7 +1,7 @@
 {
   "name": "app-imagehotspots3",
   "version": "03.00.00",
-  "description": "Shows Hotspots on images",
+  "description": "Shows HotSpots on images",
   "main": "(none)",
   "scripts": {
     "build-prod": "webpack"
