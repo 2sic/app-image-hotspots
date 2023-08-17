@@ -31,7 +31,7 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image ";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @Kit.Image.Picture(hotspots.Field("Image"), settings: "Content", imgClass: hotspotImgClass, imgAltFallback : hotspots.String("Title"))
+    @hotspots.Picture("Image", settings: "Content", imgClass: hotspotImgClass, imgAltFallback : hotspots.String("Title"))
   </div>
 </div>
 

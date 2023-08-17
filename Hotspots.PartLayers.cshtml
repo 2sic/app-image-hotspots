@@ -23,7 +23,7 @@
     <div class="@layoutClass">
       @if (hasImage) {
         <div>
-          @Kit.Image.Picture(hotspot.Field("Image"), settings: resizeSettings, imgAltFallback: hotspot.String("Title"))
+          @hotspot.Picture("Image", settings: resizeSettings, imgAltFallback: hotspot.String("Title"))
         </div>
       }
 
