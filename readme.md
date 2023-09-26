@@ -8,9 +8,9 @@ A awesome image hotspots app to use with 2sxc
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.02
+| 2sxc                | ✅    | requires 2sxc v16.04
 | Dnn                 | ✅    | For v9.6.1+
-| Oqtane 2            | ✅    | Requires v3.04+
+| Oqtane 2            | ✅    | Requires v04.00+
 | No jQuery           | ✅    | Since v3
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/ccfIKnqk) on [azing.org](https://azing.org/2sxc)
