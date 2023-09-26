@@ -19,7 +19,7 @@
   var hasImage = Text.Has(hotspot.Url("Image"));
   var hasDescription = Text.Has(hotspot.String("Description"));
 
-  <div id="hotspot3-content-@hotspot.Id-@MyContext.Module.Id" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(hotspot)>
+  <div id="hotspot3-content-@hotspot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(hotspot)>
     <div class="@layoutClass">
       @if (hasImage) {
         <div>

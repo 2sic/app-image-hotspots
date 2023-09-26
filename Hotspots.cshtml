@@ -7,10 +7,10 @@
   // Merge the settings on current item with the predefined Settings
   var hotspots = MyItem; // give it a nicer name so the code is easier to read
   var sharedSettings = AsStack(hotspots, App.Settings);
-  var moduleId = MyContext.Module.Id;
+  var moduleId = UniqueKey;
 
   // define dom attribute for fancybox
-  var fancyboxAttribute = "app-gallery7-fancybox-" + MyContext.Module.Id; 
+  var fancyboxAttribute = "app-gallery7-fancybox-" + UniqueKey; 
 }
 
 @* The visible parts - image and dots to click on *@
