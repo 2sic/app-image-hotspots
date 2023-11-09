@@ -19,7 +19,7 @@
 
 @* Activate fancybox and turnOn when everything is loaded *@
 @Kit.Page.Activate("fancybox4")
-@Kit.Page.TurnOn("window.appHotspot3.initFancybox()", data: data)
+@Kit.Page.TurnOn("window.appHotspot3.initFancybox()", data: data, require: "window.Fancybox")
 
 @* Activate special JS which the admin needs to manage the hotspots *@
 @Kit.Page.TurnOn("window.appHotspot3.activateAdmin()", condition: MyUser.IsContentAdmin)

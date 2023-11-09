@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.07.00" ExportDate="2023-09-26T09:25:34.5830245+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="16.08.00" ExportDate="2023-11-09T12:31:55.8154679+01:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -1143,6 +1143,9 @@
       <Value Key="AllowTokenTemplates" Value="False" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
+      <Value Key="DebugLog" Value="" Type="String">
+        <Dimension DimensionID="156" ReadOnly="false" />
+      </Value>
       <Value Key="Description" Value="" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
@@ -1170,7 +1173,7 @@
       <Value Key="SupportsAjaxReload" Value="True" Type="Boolean">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="Version" Value="03.04.00" Type="String">
+      <Value Key="Version" Value="03.04.01" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
@@ -1866,6 +1869,11 @@
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
     </Entity>
+    <Entity TargetType="1" AssignmentObjectType="Default" AttributeSetStaticName="2SexyContent-ContentGroup" AttributeSetName="2SexyContent-ContentGroup" EntityGUID="696f88ba-25f4-4f01-b0d2-ef3dc00c1a0e" Json="True">
+      <Value Key="Content" Value="null" Type="Entity" />
+      <Value Key="Presentation" Value="null" Type="Entity" />
+      <Value Key="Template" Value="b0d757e1-066c-40d0-b1ee-423f1a3c349c" Type="Entity" />
+    </Entity>
   </Entities>
   <PortalFiles>
     <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
@@ -1916,6 +1924,8 @@
     <Folder Id="13424" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/" />
     <Folder Id="13790" RelativePath="adam/ImageHotspots3/7e6Bq84DskaRMy-5eaX7-g/" />
     <Folder Id="13416" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/" />
+    <Folder Id="14251" RelativePath="adam/ImageHotspots3/I8YBCNZWV0aUZXQHHVRiYw/" />
+    <Folder Id="14252" RelativePath="adam/ImageHotspots3/I8YBCNZWV0aUZXQHHVRiYw/Image/" />
     <Folder Id="13431" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/" />
     <Folder Id="13422" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/" />
     <Folder Id="13420" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/" />

@@ -52,3 +52,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
 * v03.04.00 2023-07
   * 2sxc 16.02 coding conventions
   * everything typed
+* v03.04.01 2023-11
+  * Bugfixes

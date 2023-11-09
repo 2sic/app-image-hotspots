@@ -4,7 +4,7 @@ using ToSic.Sxc.Data;
 public class Helpers: Custom.Hybrid.CodeTyped
 {
   // returns required attributes for editing mode if needed
-  public object EditAttr(string moduleId, ITypedItem data, ITypedStack settings) {
+  public object EditAttr(int moduleId, ITypedItem data, ITypedStack settings) {
     if (!MyUser.IsContentAdmin) return null;
 
     // Must wrap in Tag.Custom so the HTML-Encoding will be correct

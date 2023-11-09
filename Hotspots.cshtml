@@ -7,7 +7,7 @@
   // Merge the settings on current item with the predefined Settings
   var hotspots = MyItem; // give it a nicer name so the code is easier to read
   var sharedSettings = AsStack(hotspots, App.Settings);
-  var moduleId = UniqueKey;
+  var moduleId = MyContext.Module.Id;
 
   // define dom attribute for fancybox
   var fancyboxAttribute = "app-gallery7-fancybox-" + UniqueKey; 
@@ -21,7 +21,7 @@
       var markerSettings = AsStack(marker, hotspots, App.Settings);
       var markerIcon = markerSettings.Url("HotspotMarker.HotspotIcon");
 
-      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@moduleId'>
+      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
         <img loading="lazy" src='@Link.Image(markerIcon)' alt="@marker.Title" class="heartbeat">
       </div>
     }
