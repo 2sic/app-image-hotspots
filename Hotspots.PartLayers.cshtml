@@ -1,9 +1,11 @@
-@inherits Custom.Hybrid.RazorTyped
+@inherits AppCode.Razor.HotSpotRazorBase
 @using ToSic.Razor.Blade;
+@using AppCode.Data;
 
 @{
   var hotSpots = MyModel.Item("HotSpots");
   var toolbar = Kit.Toolbar.Default().DetectDemo(hotSpots).Delete();
+
 }
 @* This creates the hidden layers which will appear when hotspots are clicked *@
 @foreach (var hotspot in hotSpots.Children("Hotspots")) {
@@ -12,8 +14,8 @@
 
   // Get image settings based on the Lightbox-presets, with image height / width based on layout type
   var resizeSettings = Kit.Image.Settings("Lightbox",
-    width: App.Settings.Int("OverlayImageMaxWidth") * (imgIsAbove ? 1 : 0.75),
-    height: App.Settings.Int("OverlayImageMaxHeight") * (imgIsAbove ? 0.7 : 1 )
+    width: AppSet.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75),
+    height: AppSet.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 )
   );
 
   var hasImage = Text.Has(hotspot.Url("Image"));
@@ -36,7 +38,7 @@
       @* If neither image nor description is set, we need to add a clear div to make sure the layout is correct *@
       @if (!hasImage && !hasDescription) {
         <div class="hotspot3-fancybox-text">
-          @App.Resources.Html("PopupNoContent");
+          @AppRes.PopupNoContent;
         </div>
       }
     </div>

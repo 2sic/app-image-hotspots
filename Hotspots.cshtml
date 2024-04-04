@@ -1,12 +1,14 @@
-@inherits Custom.Hybrid.RazorTyped
+@inherits AppCode.Razor.HotSpotRazorBase
 @using ToSic.Razor.Blade;
+@using AppCode.Data;
+
 @{
   // Get some helper commands for later on
   var helpers = GetCode("Helpers.cs");
 
   // Merge the settings on current item with the predefined Settings
   var hotspots = MyItem; // give it a nicer name so the code is easier to read
-  var sharedSettings = AsStack(hotspots, App.Settings);
+  var sharedSettings = AsStack(hotspots, AppSet);
   var moduleId = MyContext.Module.Id;
 
   // define dom attribute for fancybox
@@ -18,7 +20,7 @@
   <div class="hotspots" @helpers.EditAttr(moduleId, hotspots, sharedSettings)>
     @foreach (var marker in hotspots.Children("HotSpots")) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
-      var markerSettings = AsStack(marker, hotspots, App.Settings);
+      var markerSettings = AsStack(marker, hotspots, AppSet);
       var markerIcon = markerSettings.Url("HotspotMarker.HotspotIcon");
 
       <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
