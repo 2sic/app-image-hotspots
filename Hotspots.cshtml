@@ -1,13 +1,10 @@
-@inherits AppCode.Razor.HotSpotRazorBase
-@using ToSic.Razor.Blade;
-@using AppCode.Data;
+@inherits AppCode.Razor.AppRazor
+@using ToSic.Razor.Blade
+@using AppCode.Data
 
 @{
-  // Get some helper commands for later on
-  var helpers = GetCode("Helpers.cs");
-
   // Merge the settings on current item with the predefined Settings
-  var hotspots = MyItem; // give it a nicer name so the code is easier to read
+  var hotspots = As<ImageWithHotspots>(MyItem); // give it a nicer name so the code is easier to read
   var sharedSettings = AsStack(hotspots, AppSet);
   var moduleId = MyContext.Module.Id;
 
@@ -17,13 +14,13 @@
 
 @* The visible parts - image and dots to click on *@
 <div class="app-hotspot3" @Kit.Toolbar.Default(hotspots)>
-  <div class="hotspots" @helpers.EditAttr(moduleId, hotspots, sharedSettings)>
-    @foreach (var marker in hotspots.Children("HotSpots")) {
+  <div class="hotspots" @EditAttr(moduleId, hotspots, sharedSettings)>
+    @foreach (var marker in hotspots.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
+
       var markerSettings = AsStack(marker, hotspots, AppSet);
       var markerIcon = markerSettings.Url("HotspotMarker.HotspotIcon");
-
-      <div class="hotspot3-marker" style="@helpers.MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
+      <div class="hotspot3-marker" style="@MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
         <img loading="lazy" src='@Link.Image(markerIcon)' alt="@marker.Title" class="heartbeat">
       </div>
     }
@@ -33,10 +30,9 @@
       var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image ";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @hotspots.Picture("Image", settings: "Content", imgClass: hotspotImgClass, imgAltFallback : hotspots.String("Title"))
+    @hotspots.Picture("Image", settings: "Content", imgClass: hotspotImgClass, imgAltFallback : hotspots.Title)
   </div>
 </div>
 
-@Html.Partial("Hotspots.PartLayers.cshtml", new { hotspots })
-
+@Html.Partial("Hotspots.PartLayers.cshtml", hotspots)
 @Html.Partial("Assets.cshtml", new { fancyboxAttribute })

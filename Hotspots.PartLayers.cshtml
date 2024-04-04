@@ -1,15 +1,16 @@
-@inherits AppCode.Razor.HotSpotRazorBase
-@using ToSic.Razor.Blade;
-@using AppCode.Data;
+@inherits AppCode.Razor.AppRazor<ImageWithHotspots>
+@using ToSic.Razor.Blade
+@using AppCode
+@using AppCode.Data
 
 @{
-  var hotSpots = MyModel.Item("HotSpots");
+  var hotSpots = Model; 
   var toolbar = Kit.Toolbar.Default().DetectDemo(hotSpots).Delete();
-
 }
-@* This creates the hidden layers which will appear when hotspots are clicked *@
-@foreach (var hotspot in hotSpots.Children("Hotspots")) {
-  var imgIsAbove = hotspot.String("OverlayLayout") == "img/text"; // alternative is img-text
+
+@* This creates the hidden layers which will appear when hotspots are clicked *@  
+@foreach (var hotspot in hotSpots.Hotspots) {
+  var imgIsAbove = hotspot.OverlayLayout == "img/text"; // alternative is img-text
   var layoutClass = imgIsAbove ? "" : "display-flex-row";
 
   // Get image settings based on the Lightbox-presets, with image height / width based on layout type
@@ -18,14 +19,14 @@
     height: AppSet.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 )
   );
 
-  var hasImage = Text.Has(hotspot.Url("Image"));
-  var hasDescription = Text.Has(hotspot.String("Description"));
+  var hasImage = Text.Has(hotspot.Image);
+  var hasDescription = Text.Has(hotspot.Description);
 
   <div id="hotspot3-content-@hotspot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(hotspot)>
     <div class="@layoutClass">
       @if (hasImage) {
         <div>
-          @hotspot.Picture("Image", settings: resizeSettings, imgAltFallback: hotspot.String("Title"))
+          @hotspot.Picture("Image", settings: resizeSettings, imgAltFallback: hotspot.Title)
         </div>
       }
 

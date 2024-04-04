@@ -56,3 +56,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * Bugfixes
 * v03.04.17 2024-04
   * Strong Typed
+  * Auto Generated Class
+  * Typed MyItem 
