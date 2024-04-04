@@ -35,11 +35,11 @@ namespace AppCode.Razor
     }
 
     // This position the marker on the image and sets the size as needed
-    public IHtmlTag MarkerStyles(ITypedItem hotspot, ITypedStack settings)
+    public IHtmlTag MarkerStyles(Hotspot hotspot, ITypedStack settings)
     {
       return Tag.RawHtml(
-        "top: " + Kit.Convert.ForCode(hotspot.String("Y")) + "%;"
-        + " left: " + Kit.Convert.ForCode(hotspot.String("X")) + "%;"
+        "top: " + Kit.Convert.ForCode(hotspot.Y) + "%;"
+        + " left: " + Kit.Convert.ForCode(hotspot.X) + "%;"
         + " width: " + settings.String("HotspotMarker.HotspotWidth") + ";"
         + " height: " + settings.String("HotspotMarker.HotspotHeight")
       );
