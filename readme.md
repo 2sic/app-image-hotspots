@@ -8,7 +8,7 @@ A awesome image hotspots app to use with 2sxc
 
 | Aspect              | Status | Comments or Version |
 | ------------------- | :----: | ------------------- |
-| 2sxc                | ✅    | requires 2sxc v16.04
+| 2sxc                | ✅    | requires 2sxc v17.06.02
 | Dnn                 | ✅    | For v9.6.1+
 | Oqtane 2            | ✅    | Requires v04.00+
 | No jQuery           | ✅    | Since v3
@@ -54,3 +54,5 @@ If you want to customize the CSS, you will usually follow the ["Create Custom St
   * everything typed
 * v03.04.01 2023-11
   * Bugfixes
+* v03.04.17 2024-04
+  * Strong Typed
