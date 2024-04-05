@@ -1,24 +1,23 @@
 @inherits AppCode.Razor.AppRazor
 @using ToSic.Razor.Blade
+@using AppCode
 @using AppCode.Data
 
 @{
   // Merge the settings on current item with the predefined Settings
   var hotspots = As<ImageWithHotspots>(MyItem); // give it a nicer name so the code is easier to read
-  var sharedSettings = AsStack(hotspots, AppSet);
-  var moduleId = MyContext.Module.Id;
 
   // define dom attribute for fancybox
-  var fancyboxAttribute = "app-gallery7-fancybox-" + UniqueKey; 
+  var fancyboxAttribute = Constants.FancyboxPrefix + UniqueKey; 
 }
 
 @* The visible parts - image and dots to click on *@
 <div class="app-hotspot3" @Kit.Toolbar.Default(hotspots)>
-  <div class="hotspots" @EditAttr(moduleId, hotspots, sharedSettings)>
+  <div class="hotspots" @AttributesToEnableAddSpot(hotspots)>
     @foreach (var marker in hotspots.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
 
-      var markerSettings = AsStack(marker, hotspots, AppSet);
+      var markerSettings = AsStack(marker, hotspots, App.Settings);
       var markerIcon = markerSettings.Url("HotspotMarker.HotspotIcon");
       <div class="hotspot3-marker" style="@MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
         <img loading="lazy" src='@Link.Image(markerIcon)' alt="@marker.Title" class="heartbeat">

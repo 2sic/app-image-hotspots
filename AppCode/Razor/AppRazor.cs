@@ -7,34 +7,32 @@ namespace AppCode.Razor
   public abstract partial class AppRazor<TModel>: Custom.Hybrid.RazorTyped<TModel>
   {
     /// <summary>
-    /// App Resources (typed)
+    /// returns required attributes for editing mode if needed
     /// </summary>
-    protected AppResources AppRes => _appResources ??= App.Resources;
-    private AppResources _appResources;
-
-    /// <summary>
-    /// App Settings (typed)
-    /// </summary>
-    protected AppSettings AppSet => _appSettings ??= App.Settings;
-    private AppSettings _appSettings;
-
-
-    // returns required attributes for editing mode if needed
-    public IHtmlTag EditAttr(int moduleId, ITypedItem data, ITypedStack settings)
+    public IHtmlTag AttributesToEnableAddSpot(ITypedItem hotspots)
     {
       if (!MyUser.IsContentAdmin) return null;
 
+      var settings = AsStack(hotspots, App.Settings);
+
       // Must wrap in Tag.Custom so the HTML-Encoding will be correct
       return Tag.RawHtml(
-        "data-module-id='" + moduleId
-        + "' data-entity-id='" + data.Id
-        + "' data-guid='" + data.Guid 
+        // These three parameters are used by the JS to provide add-new-hotspot functionality
+        // so you can click anywhere on the image to add a hotspot
+        "data-module-id='" + MyContext.Module.Id
+        + "' data-entity-id='" + hotspots.Id
+        + "' data-guid='" + hotspots.Guid
+        // These offsets are to position the marker on the image,
+        // eg. if the marker is just a dot, it doesn't need an offset.
+        // eg. if the marker is a map-pin, then the offset would be negative so the image starts higher up
         + "' data-iconoffset-x='" + settings.String("HotspotMarker.HotspotOffsetX")
         + "' data-iconoffset-y='" + settings.String("HotspotMarker.HotspotOffsetY") + "'"
       );
     }
 
-    // This position the marker on the image and sets the size as needed
+    /// <summary>
+    /// This position the marker on the image and sets the size as needed
+    /// </summary>
     public IHtmlTag MarkerStyles(Hotspot hotspot, ITypedStack settings)
     {
       return Tag.RawHtml(

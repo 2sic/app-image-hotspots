@@ -1,5 +1,4 @@
 @inherits AppCode.Razor.AppRazor<ImageWithHotspots>
-@using ToSic.Razor.Blade
 @using AppCode
 @using AppCode.Data
 
@@ -9,37 +8,37 @@
 }
 
 @* This creates the hidden layers which will appear when hotspots are clicked *@  
-@foreach (var hotspot in hotSpots.Hotspots) {
-  var imgIsAbove = hotspot.OverlayLayout == "img/text"; // alternative is img-text
+@foreach (var spot in hotSpots.Hotspots) {
+  var imgIsAbove = spot.OverlayLayout == "img/text"; // alternative is img-text
   var layoutClass = imgIsAbove ? "" : "display-flex-row";
 
   // Get image settings based on the Lightbox-presets, with image height / width based on layout type
   var resizeSettings = Kit.Image.Settings("Lightbox",
-    width: AppSet.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75),
-    height: AppSet.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 )
+    width: App.Settings.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75),
+    height: App.Settings.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 )
   );
 
-  var hasImage = Text.Has(hotspot.Image);
-  var hasDescription = Text.Has(hotspot.Description);
+  var hasImage = spot.IsNotEmpty("Image");
+  var hasDescription = spot.IsNotEmpty("Description");
 
-  <div id="hotspot3-content-@hotspot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(hotspot)>
+  <div id="hotspot3-content-@spot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(spot)>
     <div class="@layoutClass">
       @if (hasImage) {
         <div>
-          @hotspot.Picture("Image", settings: resizeSettings, imgAltFallback: hotspot.Title)
+          @spot.Picture("Image", settings: resizeSettings, imgAltFallback: spot.Title)
         </div>
       }
 
       @if (hasDescription) {
         <div class="hotspot3-fancybox-text">
-          @hotspot.Html("Description", container:"")
+          @spot.Html("Description", container:"")
         </div>
       }
 
       @* If neither image nor description is set, we need to add a clear div to make sure the layout is correct *@
       @if (!hasImage && !hasDescription) {
         <div class="hotspot3-fancybox-text">
-          @AppRes.PopupNoContent;
+          @App.Resources.Html("PopupNoContent");
         </div>
       }
     </div>
