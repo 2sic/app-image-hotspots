@@ -4,20 +4,19 @@
 @using AppCode.Data
 
 @{
-  // Merge the settings on current item with the predefined Settings
-  var hotspots = As<ImageWithHotspots>(MyItem); // give it a nicer name so the code is easier to read
+// Get main image with hotspots from the model
+  var mainImg = As<ImageWithHotspots>(MyItem); 
 
   // define dom attribute for fancybox
   var fancyboxAttribute = Constants.FancyboxPrefix + UniqueKey; 
 }
 
 @* The visible parts - image and dots to click on *@
-<div class="app-hotspot3" @Kit.Toolbar.Default(hotspots)>
-  <div class="hotspots" @AttributesToEnableAddSpot(hotspots)>
-    @foreach (var marker in hotspots.Hotspots) {
+<div class="app-hotspot3" @Kit.Toolbar.Default(mainImg)>
+  <div class="hotspots" @AttributesToEnableAddSpot(mainImg)>
+    @foreach (var marker in mainImg.Hotspots) {
       // Merge settings of marker, hotspot-set and defaults to always take the best option
-
-      var markerSettings = AsStack(marker, hotspots, App.Settings);
+      var markerSettings = AsStack(marker, mainImg, App.Settings);
       var markerIcon = markerSettings.Url("HotspotMarker.HotspotIcon");
       <div class="hotspot3-marker" style="@MarkerStyles(marker, markerSettings)" @fancyboxAttribute data-src='#hotspot3-content-@marker.Id-@UniqueKey'>
         <img loading="lazy" src='@Link.Image(markerIcon)' alt="@marker.Title" class="heartbeat">
@@ -26,12 +25,12 @@
 
     @* The main image, on which the the hotspots are placed - will adhere to "Content" image conventions *@
     @{
-      var pictureClass = hotspots.IsDemoItem ? "" : "hotspot3-js-image ";
+      var pictureClass = mainImg.IsDemoItem ? "" : "hotspot3-js-image ";
       var hotspotImgClass = pictureClass + "hotspot3-image";
     }
-    @hotspots.Picture("Image", settings: "Content", imgClass: hotspotImgClass, imgAltFallback : hotspots.Title)
+    @mainImg.Picture("Image", settings: "Content", imgClass: hotspotImgClass, imgAltFallback : mainImg.Title)
   </div>
 </div>
 
-@Html.Partial("Hotspots.PartLayers.cshtml", hotspots)
+@Html.Partial("Hotspots.PartLayers.cshtml", mainImg)
 @Html.Partial("Assets.cshtml", new { fancyboxAttribute })

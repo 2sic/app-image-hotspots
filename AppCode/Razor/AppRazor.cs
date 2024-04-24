@@ -9,7 +9,7 @@ namespace AppCode.Razor
     /// <summary>
     /// returns required attributes for editing mode if needed
     /// </summary>
-    public IHtmlTag AttributesToEnableAddSpot(ITypedItem hotspots)
+    public IHtmlTag AttributesToEnableAddSpot(ImageWithHotspots hotspots)
     {
       if (!MyUser.IsContentAdmin) return null;
 

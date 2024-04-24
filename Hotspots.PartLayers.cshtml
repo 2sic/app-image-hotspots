@@ -3,12 +3,13 @@
 @using AppCode.Data
 
 @{
-  var hotSpots = Model; 
-  var toolbar = Kit.Toolbar.Default().DetectDemo(hotSpots).Delete();
+// Get main image from Hotspots.cshtml
+  var mainImg = Model; 
+  var toolbar = Kit.Toolbar.Default().DetectDemo(mainImg).Delete();
 }
 
 @* This creates the hidden layers which will appear when hotspots are clicked *@  
-@foreach (var spot in hotSpots.Hotspots) {
+@foreach (var spot in mainImg.Hotspots) {
   var imgIsAbove = spot.OverlayLayout == "img/text"; // alternative is img-text
   var layoutClass = imgIsAbove ? "" : "display-flex-row";
 
