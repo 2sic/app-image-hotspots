@@ -1,40 +1,49 @@
-@inherits Custom.Hybrid.RazorTyped
-@using ToSic.Razor.Blade;
+@inherits AppCode.Razor.AppRazor<ImageWithHotspots>
+@using AppCode
+@using AppCode.Data
 
 @{
-  var hotSpots = MyModel.Item("HotSpots");
-  var toolbar = Kit.Toolbar.Default().DetectDemo(hotSpots).Delete();
+  // Image config passed in from Hotspots.cshtml
+  var mainImg = Model; 
+
+  // Prepare toolbar for editing each spot
+  var toolbar = Kit.Toolbar.Default().DetectDemo(mainImg).Delete();
+
 }
-@* This creates the hidden layers which will appear when hotspots are clicked *@
-@foreach (var hotspot in hotSpots.Children("Hotspots")) {
-  var imgIsAbove = hotspot.String("OverlayLayout") == "img/text"; // alternative is img-text
+
+@* This creates the hidden layers which will appear when hotspots are clicked *@  
+@foreach (var spot in mainImg.Hotspots) {
+  var imgIsAbove = spot.OverlayLayout == "img/text"; // alternative is img-text
   var layoutClass = imgIsAbove ? "" : "display-flex-row";
 
-  // Get image settings based on the Lightbox-presets, with image height / width based on layout type
+    // Prepare image settings based on the Lightbox-presets, with image height / width based on layout type
   var resizeSettings = Kit.Image.Settings("Lightbox",
-    width: App.Settings.Int("OverlayImageMaxWidth") * (imgIsAbove ? 1 : 0.75),
-    height: App.Settings.Int("OverlayImageMaxHeight") * (imgIsAbove ? 0.7 : 1 )
+    width: App.Settings.OverlayImageMaxWidth * (imgIsAbove ? 1 : 0.75),
+    height: App.Settings.OverlayImageMaxHeight * (imgIsAbove ? 0.7 : 1 )
   );
 
-  var hasImage = Text.Has(hotspot.Url("Image"));
-  var hasDescription = Text.Has(hotspot.String("Description"));
+  var hasImage = spot.IsNotEmpty("Image");
+  var hasDescription = spot.IsNotEmpty("Description");
 
-  <div id="hotspot3-content-@hotspot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(hotspot)>
+  <div id="hotspot3-content-@spot.Id-@UniqueKey" class="hotspot3-fancybox-content" style="display: none" @toolbar.For(spot)>
     <div class="@layoutClass">
-      @if (hasImage) {
+      @if (hasImage)
+      {
         <div>
-          @hotspot.Picture("Image", settings: resizeSettings, imgAltFallback: hotspot.String("Title"))
+          @spot.Picture("Image", settings: resizeSettings, imgAltFallback: spot.Title)
         </div>
       }
 
-      @if (hasDescription) {
+      @if (hasDescription)
+      {
         <div class="hotspot3-fancybox-text">
-          @hotspot.Html("Description", container:"")
+          @spot.Html("Description", container:"")
         </div>
       }
 
       @* If neither image nor description is set, we need to add a clear div to make sure the layout is correct *@
-      @if (!hasImage && !hasDescription) {
+      @if (!hasImage && !hasDescription)
+      {
         <div class="hotspot3-fancybox-text">
           @App.Resources.Html("PopupNoContent");
         </div>

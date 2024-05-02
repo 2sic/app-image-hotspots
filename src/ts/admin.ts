@@ -30,7 +30,7 @@ export function activateAdmin() {
         const iconOffsetX = tagWithData.dataset.iconoffsetX;
         const iconOffsetY = tagWithData.dataset.iconoffsetY;
 
-        // get exact position where hotspor marker shoul be added
+        // get exact position where hotspot marker should be added
         const x = e.clientX - bounds.left - parseInt(iconOffsetX);
         const y = e.clientY - bounds.top - parseInt(iconOffsetY);
         const xPercent = x / bounds.width * 100;
