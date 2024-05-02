@@ -13,7 +13,7 @@ namespace AppCode.Razor
     {
       if (!MyUser.IsContentAdmin) return null;
 
-      var settings = AsStack(hotspots, App.Settings);
+      var settings = AsStack<ImageWithHotspots>(hotspots, App.Settings);
 
       // Must wrap in Tag.Custom so the HTML-Encoding will be correct
       return Tag.RawHtml(
