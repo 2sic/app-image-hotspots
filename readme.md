@@ -10,7 +10,7 @@ A awesome image hotspots app to use with 2sxc
 | ------------------- | :----: | -------------------
 | 2sxc                | ✅    | requires 2sxc v17.07.00
 | Dnn                 | ✅    | For v9.6.1+
-| Oqtane              | ✅    | Requires v04.00+
+| Oqtane              | ✅    | Requires v05.00+
 | No jQuery           | ✅    | Since v3
 | Live Demo           | ➖    |
 | Install Checklist   | ✅    | See [Installation](https://azing.org/2sxc/r/ccfIKnqk) on [azing.org](https://azing.org/2sxc)
