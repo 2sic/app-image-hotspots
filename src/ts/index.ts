@@ -1,6 +1,4 @@
 
-require('../scss/_style.scss');
-
 import { activateAdmin } from './admin';
 import { initFancybox } from './lib-2sxc-fancybox';
 import { FancyboxOptions } from './lib-2sxc-fancybox-options';

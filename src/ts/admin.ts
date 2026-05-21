@@ -1,4 +1,5 @@
-import { CommandNames } from '@2sic.com/2sxc-typings';
+import type { SxcGlobal } from "@2sic.com/2sxc-typings";
+declare let $2sxc: SxcGlobal;
 
 /** Loader function for our Hotspot Admin */
 export function activateAdmin() {
@@ -7,15 +8,13 @@ export function activateAdmin() {
   hotSpotImage.forEach((hsElem: HTMLElement, index) => {
     // add click listener only once
     if(!hsElem.classList.contains('added-listener')) {
-      hsElem.addEventListener('click', () => {  
-        debugger;
+      hsElem.addEventListener('click', (e: MouseEvent) => {  
         // if clicked element is hotspot - do nothing
         if(hsElem.classList.contains('hotspot3-marker')) {
           return false;
         }
 
         // get all needed information to create new hotspot
-        const e = (event as MouseEvent);
         // Find the tag with class 'hotspots' because it contains more positioning data
         const tagWithData = hsElem.closest(".hotspots") as HTMLElement;
 
@@ -38,7 +37,8 @@ export function activateAdmin() {
         
         // open 2sxc mask with prefilled hotpot coordinates
         $2sxc(moduleId).cms.run({
-          action: CommandNames.new,
+          // @ts-ignore
+          action: 'new',
           params: {
             entityId: entityId,
             parent: guid,
