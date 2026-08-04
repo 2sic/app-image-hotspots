@@ -5,7 +5,8 @@ declare let $2sxc: SxcGlobal;
 export function activateAdmin() {
   // Hotspot image where marker should be added
   let hotSpotImage = document.querySelectorAll('.hotspot3-js-image');
-  hotSpotImage.forEach((hsElem: HTMLElement, index) => {
+  hotSpotImage.forEach((elem, index) => {
+    const hsElem = elem as HTMLElement;
     // add click listener only once
     if(!hsElem.classList.contains('added-listener')) {
       hsElem.addEventListener('click', (e: MouseEvent) => {  
@@ -18,8 +19,8 @@ export function activateAdmin() {
         // Find the tag with class 'hotspots' because it contains more positioning data
         const tagWithData = hsElem.closest(".hotspots") as HTMLElement;
 
-        const moduleId = parseInt(tagWithData.dataset.moduleId);
-        const entityId = parseInt(tagWithData.dataset.entityId);
+        const moduleId = parseInt(tagWithData.dataset.moduleId ?? '0');
+        const entityId = parseInt(tagWithData.dataset.entityId ?? '0');
         const guid = tagWithData.dataset.guid;
 
         // get image dimensions
@@ -30,8 +31,8 @@ export function activateAdmin() {
         const iconOffsetY = tagWithData.dataset.iconoffsetY;
 
         // get exact position where hotspot marker should be added
-        const x = e.clientX - bounds.left - parseInt(iconOffsetX);
-        const y = e.clientY - bounds.top - parseInt(iconOffsetY);
+        const x = e.clientX - bounds.left - parseInt(iconOffsetX ?? '0');
+        const y = e.clientY - bounds.top - parseInt(iconOffsetY ?? '0');
         const xPercent = x / bounds.width * 100;
         const yPercent = y / bounds.height * 100;
         

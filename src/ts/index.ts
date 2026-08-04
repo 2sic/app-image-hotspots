@@ -17,11 +17,11 @@ function initFancyboxCustom({ attribute, options } : { attribute: string, option
         // if (img == null) return;
         const imgWidth = img?.getBoundingClientRect().width ?? 0;
 
-        const fancyboxText: HTMLElement = document.querySelector(`${slide.src} .hotspot3-fancybox-text`);
+        const fancyboxText: HTMLElement | null = document.querySelector(`${slide.src} .hotspot3-fancybox-text`);
         if (fancyboxText?.hasAttribute('style') == true)
           fancyboxText.style.maxWidth = `${Math.floor(imgWidth)}px`;
 
-        const hotspotContent: HTMLElement = document.querySelector(`${slide.src}.hotspot3-fancybox-content`);
+        const hotspotContent: HTMLElement | null = document.querySelector(`${slide.src}.hotspot3-fancybox-content`);
         if (hotspotContent)
           hotspotContent.style.opacity = "1";
       }
