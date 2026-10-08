@@ -1,5 +1,4 @@
-import type { SxcGlobal } from "@2sic.com/2sxc-typings";
-declare let $2sxc: SxcGlobal;
+declare let $2sxc: any;
 
 /** Loader function for our Hotspot Admin */
 export function activateAdmin() {
