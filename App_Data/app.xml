@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="21.08.00" ExportDate="2026-06-16T07:57:03.47383+02:00">
+<SexyContent FileVersion="07.00.00" MinimumRequiredVersion="07.04.02" ModuleVersion="22.01.00" ExportDate="2026-11-05T13:19:36.7564814+01:00">
   <Header>
     <App Guid="9a9829b6-aecc-4804-b372-a55d0f980601" />
     <Language Default="en-us" />
@@ -1161,10 +1161,10 @@
       <Value Key="OriginalId" Value="" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredDnnVersion" Value="09.06.01" Type="String">
+      <Value Key="RequiredDnnVersion" Value="9.11.2" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
-      <Value Key="RequiredOqtaneVersion" Value="05.00.00" Type="String">
+      <Value Key="RequiredOqtaneVersion" Value="10.0.0" Type="String">
         <Dimension DimensionID="156" ReadOnly="false" />
       </Value>
       <Value Key="RequiredVersion" Value="21.05.00" Type="String">
@@ -1876,29 +1876,29 @@
     </Entity>
   </Entities>
   <PortalFiles>
-    <File Id="4484" RelativePath="adam\Image Hotspots\rdH6jpLskEidJdHX6z-n7A\Image\car-interior.jpg" />
-    <File Id="4512" RelativePath="adam\Image Hotspots\3G45uBTlckCcl69FT7QOyw\Image\knauf.jpg" />
-    <File Id="4511" RelativePath="adam\Image Hotspots\459Wy4kJ_UWVZdsrOdMWMg\Image\board-computer.jpg" />
-    <File Id="4509" RelativePath="adam\Image Hotspots\RAyDlHD7iUeKtTHveU8mJg\Image\lenkrad.jpg" />
-    <File Id="4510" RelativePath="adam\Image Hotspots\ofuClPFsY0izyz0Wp3bNaA\Image\audio.jpg" />
-    <File Id="4504" RelativePath="adam\Image Hotspots\H0kLS7RpV029rX4y62jKxw\HotspotIcon\reddot.png" />
-    <File Id="4505" RelativePath="adam\Image Hotspots\wUNVpfwEv066W4p0Fxuf4w\HotspotIcon\bluedot.png" />
-    <File Id="4506" RelativePath="adam\Image Hotspots\LugSst9hbES92Oc7IVpIlQ\HotspotIcon\white-star.png" />
-    <File Id="4507" RelativePath="adam\Image Hotspots\wz5cVnKeLkqnmKMC8S8q8A\HotspotIcon\plus-circle.svg" />
-    <File Id="4498" RelativePath="adam\Image Hotspots\CTpjpVOBK0K5_1MW3oWVCw\HotspotIcon\star.svg" />
-    <File Id="6027" RelativePath="adam\ImageHotspots3\U2rSuWq2hk2qFsOczaZL7w\Image\image.png" />
-    <File Id="6028" RelativePath="adam\ImageHotspots3\QPTZMCOw0U2HLkD-LEHNvA\Image\image.png" />
-    <File Id="6025" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img-2.png" />
-    <File Id="6026" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img-2.png" />
-    <File Id="6030" RelativePath="adam\ImageHotspots3\Uu4K86bPVE6jJfJk6yp0Ig\Image\createtravel-tv-qS9W_cuRKfI-unsplash.jpg" />
-    <File Id="6031" RelativePath="adam\ImageHotspots3\JHUYPfLqUUmL0_-Kx9Tu2w\Image\the-blowup-oW5pE7oK73I-unsplash.jpg" />
-    <File Id="6016" RelativePath="adam\ImageHotspots3\4ZFk0AxDFku2_DU9MhpMnw\Image\tall img.png" />
-    <File Id="6174" RelativePath="adam\ImageHotspots3\7e6Bq84DskaRMy-5eaX7-g\Image\tree-736885__480.jpg" />
-    <File Id="6012" RelativePath="adam\ImageHotspots3\eR610vO6WUildXa0O8uZHA\Image\Platzhalterbild_Inhalt-1.jpg" />
-    <File Id="6015" RelativePath="adam\ImageHotspots3\MjeAhApwTk2IiLoTh6d0Yw\Image\tall img.png" />
-    <File Id="6014" RelativePath="adam\ImageHotspots3\QPTZMCOw0U2HLkD-LEHNvA\Image\wide img.png" />
-    <File Id="6173" RelativePath="adam\ImageHotspots3\qYVI1hkvqU-KAO70vE-8Bw\Image\visual-reverse-image-search-v2_intro.jpg" />
-    <File Id="6013" RelativePath="adam\ImageHotspots3\U2rSuWq2hk2qFsOczaZL7w\Image\wide img.png" />
+    <File Id="4484" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/Image/car-interior.jpg" />
+    <File Id="4512" RelativePath="adam/Image Hotspots/3G45uBTlckCcl69FT7QOyw/Image/knauf.jpg" />
+    <File Id="4511" RelativePath="adam/Image Hotspots/459Wy4kJ_UWVZdsrOdMWMg/Image/board-computer.jpg" />
+    <File Id="4509" RelativePath="adam/Image Hotspots/RAyDlHD7iUeKtTHveU8mJg/Image/lenkrad.jpg" />
+    <File Id="4510" RelativePath="adam/Image Hotspots/ofuClPFsY0izyz0Wp3bNaA/Image/audio.jpg" />
+    <File Id="4504" RelativePath="adam/Image Hotspots/H0kLS7RpV029rX4y62jKxw/HotspotIcon/reddot.png" />
+    <File Id="4505" RelativePath="adam/Image Hotspots/wUNVpfwEv066W4p0Fxuf4w/HotspotIcon/bluedot.png" />
+    <File Id="4506" RelativePath="adam/Image Hotspots/LugSst9hbES92Oc7IVpIlQ/HotspotIcon/white-star.png" />
+    <File Id="4507" RelativePath="adam/Image Hotspots/wz5cVnKeLkqnmKMC8S8q8A/HotspotIcon/plus-circle.svg" />
+    <File Id="4498" RelativePath="adam/Image Hotspots/CTpjpVOBK0K5_1MW3oWVCw/HotspotIcon/star.svg" />
+    <File Id="6027" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/Image/image.png" />
+    <File Id="6028" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/Image/image.png" />
+    <File Id="6025" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/Image/tall img-2.png" />
+    <File Id="6026" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/Image/tall img-2.png" />
+    <File Id="6030" RelativePath="adam/ImageHotspots3/Uu4K86bPVE6jJfJk6yp0Ig/Image/createtravel-tv-qS9W_cuRKfI-unsplash.jpg" />
+    <File Id="6031" RelativePath="adam/ImageHotspots3/JHUYPfLqUUmL0_-Kx9Tu2w/Image/the-blowup-oW5pE7oK73I-unsplash.jpg" />
+    <File Id="6016" RelativePath="adam/ImageHotspots3/4ZFk0AxDFku2_DU9MhpMnw/Image/tall img.png" />
+    <File Id="6174" RelativePath="adam/ImageHotspots3/7e6Bq84DskaRMy-5eaX7-g/Image/tree-736885__480.jpg" />
+    <File Id="6012" RelativePath="adam/ImageHotspots3/eR610vO6WUildXa0O8uZHA/Image/Platzhalterbild_Inhalt-1.jpg" />
+    <File Id="6015" RelativePath="adam/ImageHotspots3/MjeAhApwTk2IiLoTh6d0Yw/Image/tall img.png" />
+    <File Id="6014" RelativePath="adam/ImageHotspots3/QPTZMCOw0U2HLkD-LEHNvA/Image/wide img.png" />
+    <File Id="6173" RelativePath="adam/ImageHotspots3/qYVI1hkvqU-KAO70vE-8Bw/Image/visual-reverse-image-search-v2_intro.jpg" />
+    <File Id="6013" RelativePath="adam/ImageHotspots3/U2rSuWq2hk2qFsOczaZL7w/Image/wide img.png" />
   </PortalFiles>
   <PortalFolders>
     <Folder Id="9913" RelativePath="adam/Image Hotspots/rdH6jpLskEidJdHX6z-n7A/Image/" />
